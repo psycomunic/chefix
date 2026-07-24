@@ -1012,3 +1012,8 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
   .strip .strip-msg b{font-weight:700}
   .strip-btn{font-size:12px;padding:5px 11px}
 }
+
+/* oculta o top strip no celular (fica so no desktop/tablet) */
+@media(max-width:600px){
+  .strip{display:none}
+}
