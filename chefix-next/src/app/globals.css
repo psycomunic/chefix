@@ -927,3 +927,69 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 .intel-content.reveal.in .ifeat-spark polyline{animation:sparkDraw 1.4s ease .55s forwards}
 .intel-content.reveal .ifeat-bar i{width:0}
 .intel-content.reveal.in .ifeat-bar i{width:68%}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE (refino geral) · appended
+   ========================================================================== */
+
+/* mantem o CTA "Assinar agora" visivel no header mobile (esconde so o Login) */
+@media(max-width:940px){
+  .nav-cta{display:flex}
+  .nav-cta .login{display:none}
+  .nav-cta .btn{padding:11px 16px;font-size:14px}
+  .nav{gap:12px}
+}
+
+/* tablets/phones grandes */
+@media(max-width:640px){
+  section.block{padding:56px 0}
+  section.block.tight{padding:44px 0}
+  .sec-head{margin-bottom:34px}
+  .page-hero .wrap{padding:44px 24px 40px}
+  .cta-band{padding:34px 22px}
+  .cta-band p{margin-bottom:22px}
+  .final .wrap{gap:28px}
+  .form-card{padding:22px}
+  .referral .box{padding:30px 22px}
+  .referral .cb{font-size:58px}
+  .referral h2{font-size:26px}
+  /* checkout */
+  .co-step{padding:20px 18px}
+  .co-title{padding:28px 0 6px}
+  .co-grid{padding:28px 0 60px}
+  /* painel de insumos mais compacto */
+  .ip-row{grid-template-columns:1.55fr .5fr .75fr .8fr;gap:6px;padding:9px 8px}
+  .ip-nm,.ip-pr,.ip-cu{font-size:12px}
+  .ip-add{padding:6px 10px;font-size:11px}
+  /* intel: cards um pouco menores */
+  .ifeat{padding:14px 15px}
+  .ifeat-kpi b{font-size:20px}
+}
+
+/* celulares pequenos */
+@media(max-width:430px){
+  h2{font-size:clamp(24px,7vw,28px)}
+  .hero h1{font-size:clamp(30px,9vw,36px)}
+  .lead{font-size:16px}
+  /* CTAs empilhados e full-width para toque */
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-cta .btn{width:100%}
+  .final .btn-lg{width:100%}
+  /* faixa de indicadores: rotulos menores */
+  .hero-meta .m b{font-size:19px}
+  .hero-meta .m span{font-size:11.5px}
+  /* pills de segmento nao vazam */
+  .trust .seg{gap:8px}
+  .chip{font-size:13px;padding:7px 12px}
+  /* titulos de secao com melhor respiro */
+  .sec-head{margin-bottom:28px}
+  section.block{padding:48px 0}
+  /* acordeoes / prose */
+  .acc summary{padding:16px 18px;font-size:15.5px}
+  .prose h2{font-size:21px}
+}
+
+/* trava de seguranca contra rolagem horizontal acidental no mobile */
+@media(max-width:640px){
+  .co-grid,.intel-grid,.flow .wrap,.label-sec .wrap,.problem .wrap,.final .wrap{gap:32px}
+}
