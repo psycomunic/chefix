@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funcionalidades | Chefix</title>
+  <meta name="description" content="Conheça os 8 módulos da Chefix: fichas técnicas, precificação, estoque, compras, desperdício, checklist, etiquetagem e guia de produção. Tudo o que a sua cozinha precisa em um só lugar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/chefix.css">
+  <style>
+    .mock{display:flex;flex-direction:column;gap:12px}
+    .mock .mk-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow-sm);min-width:0}
+    .mock .mk-h{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:10px}
+    .mock .mk-h small{font-weight:600;color:var(--slate);font-size:11.5px}
+    .mock .mk-row{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:#2c384c;padding:7px 0;border-bottom:1px solid var(--line)}
+    .mock .mk-row:last-child{border-bottom:0}
+    .mock .mk-row b{color:var(--navy)}
+    .mock .mk-big{font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+    .mock .mk-tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:var(--green-bg);color:var(--green)}
+    .mock .mk-tag.or{background:#fff2e9;color:var(--orange-600)}
+    .mock .bar{height:9px;border-radius:6px;background:var(--mist-2);overflow:hidden}
+    .mock .bar i{display:block;height:100%;background:var(--orange);border-radius:6px}
+    .mock .bar.g i{background:var(--green)}
+    .mock .mk-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .mock .mk-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:#2c384c}
+    .mock .mk-list li .dot{width:20px;height:20px;flex:none;border-radius:6px;background:#fff2e9;color:var(--orange);display:grid;place-items:center;font-size:11px;font-weight:800}
+    .mock .mk-tab{width:56px;height:56px;flex:none;border-radius:12px;background:var(--mist-2);display:grid;place-items:center;color:var(--slate);font-size:11px;font-weight:700}
+    .mod-cta{text-align:center;margin-top:8px}
+    .split{margin-bottom:0}
+    .mod-row{padding:60px 0;border-bottom:1px solid var(--line)}
+    .mod-row:last-of-type{border-bottom:0}
+  </style>
+</head>
+<body>
+<!-- ================= MARK + STRIP + HEADER ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chefix-mark" viewBox="0 0 100 100">
+    <path d="M50 4C25.7 4 6 23.7 6 48s19.7 44 44 44c11.9 0 22.7-4.7 30.6-12.4L66 65C61.8 69 56.2 71.4 50 71.4 37.1 71.4 26.6 60.9 26.6 48S37.1 24.6 50 24.6c6.2 0 11.8 2.4 16 6.4l14.6-14.6C72.7 8.7 61.9 4 50 4z" fill="currentColor"/>
+    <path d="M44 40h16c3.3 0 6 2.7 6 6v6H38v-6c0-3.3 2.7-6 6-6z" fill="#fff"/>
+    <circle cx="42" cy="34" r="9" fill="#fff"/><circle cx="58" cy="34" r="9" fill="#fff"/><circle cx="50" cy="30" r="10" fill="#fff"/>
+    <path d="M34 52l10 12 30-30" fill="none" stroke="#f86c1f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M70 30l8-6-2 12z" fill="#f86c1f"/>
+  </symbol>
+</svg>
+
+<div class="strip">
+  <div class="wrap">
+    <span>🚀 <b>Módulos de consultoria integrados</b> com Proattiva &amp; Torres Fintech</span>
+    <div class="strip-right">
+      <span>Atendimento em todo o Brasil</span>
+      <a href="contato.html">Fale com a gente</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><svg class="mark" style="color:var(--navy)"><use href="#chefix-mark"/></svg><span class="wm">Chefix</span></a>
+    <nav class="menu">
+      <a href="funcionalidades.html" class="active">Funcionalidades</a>
+      <a href="como-funciona.html">Como funciona</a>
+      <a href="consultoria.html">Consultoria</a>
+      <a href="planos.html">Planos</a>
+      <a href="indique-e-ganhe.html">Indique e ganhe</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://app.chefix.com.br" class="login">Login</a>
+      <a href="checkout.html" class="btn btn-primary">Assinar agora</a>
+    </div>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="page-hero center">
+  <div class="wrap">
+    <span class="eyebrow">Funcionalidades</span>
+    <h1>Tudo o que a sua cozinha precisa, em um só lugar</h1>
+    <p class="lead">São 8 módulos que conversam entre si para você parar de gerenciar no achismo. Você cadastra uma vez e a informação flui por fichas técnicas, estoque, compras e etiquetagem, com o custo real sempre na sua frente.</p>
+  </div>
+</section>
+
+<!-- ================= MÓDULOS ================= -->
+<section class="block" style="padding-top:40px;padding-bottom:40px">
+  <div class="wrap">
+
+    <!-- 1 Fichas técnicas -->
+    <div class="mod-row split">
+      <div>
+        <span class="eyebrow">Módulo 1</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Fichas técnicas</h2>
+        <p class="lead">Monte o custo de bases e pratos com foto, modo de preparo e rendimento. A margem real aparece na hora, sem planilha e sem conta de padeiro.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Custo detalhado de cada base e cada prato do cardápio</li>
+          <li><span class="ck">✓</span> Foto, modo de preparo e rendimento em uma tela só</li>
+          <li><span class="ck">✓</span> Margem real calculada no momento em que você monta a ficha</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Risoto de camarão <small>rende 4 porções</small></div>
+            <div class="mk-row"><span>Custo dos insumos</span><b>R$ 18,40</b></div>
+            <div class="mk-row"><span>Preço de venda</span><b>R$ 52,00</b></div>
+            <div class="mk-row"><span>Margem real</span><span class="mk-tag">64,6%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 Precificação -->
+    <div class="mod-row split rev">
+      <div>
+        <span class="eyebrow">Módulo 2</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Precificação inteligente</h2>
+        <p class="lead">Chegue no preço certo considerando lucro, custos fixos e variáveis e as taxas de cada canal de delivery. Nada de descobrir o prejuízo só no fim do mês.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Lucro desejado embutido no preço de cada item</li>
+          <li><span class="ck">✓</span> Custos fixos e variáveis rateados de forma automática</li>
+          <li><span class="ck">✓</span> Taxas de delivery consideradas por plataforma</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Composição do preço <small>por porção</small></div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span>Insumos</span><b>35%</b></div><div class="bar"><i style="width:35%"></i></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span>Custos fixos</span><b>20%</b></div><div class="bar"><i style="width:20%"></i></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span>Taxa delivery</span><b>18%</b></div><div class="bar"><i style="width:18%"></i></div></div>
+              <div><div style="display:flex;justify-content:space-between;font-size:12.5px;margin-bottom:5px"><span>Lucro</span><b>27%</b></div><div class="bar g"><i style="width:27%"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Estoque -->
+    <div class="mod-row split">
+      <div>
+        <span class="eyebrow">Módulo 3</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Gestão de estoque</h2>
+        <p class="lead">Entradas e saídas integradas ao restante do sistema e uma contagem simples que qualquer pessoa da equipe consegue fazer. O saldo fica sempre confiável.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Entradas e saídas integradas às fichas e às compras</li>
+          <li><span class="ck">✓</span> Contagem simples, direto do celular no salão ou na câmara</li>
+          <li><span class="ck">✓</span> Valor total do estoque atualizado em tempo real</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Estoque atual</div>
+            <div class="mk-row"><span>Camarão limpo</span><b>4,2 kg</b></div>
+            <div class="mk-row"><span>Arroz arbóreo</span><b>12 kg</b></div>
+            <div class="mk-row"><span>Queijo parmesão</span><span class="mk-tag or">baixo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mod-cta"><a href="checkout.html" class="btn btn-primary btn-lg">Assinar agora</a></div>
+
+    <!-- 4 Compras -->
+    <div class="mod-row split rev">
+      <div>
+        <span class="eyebrow">Módulo 4</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Compras e cotações</h2>
+        <p class="lead">Pedidos automatizados que nascem do próprio estoque. O sistema sugere o que comprar, você cota com os fornecedores e fecha pelo melhor preço.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Sugestão de pedido conectada ao saldo do estoque</li>
+          <li><span class="ck">✓</span> Cotação com vários fornecedores lado a lado</li>
+          <li><span class="ck">✓</span> Entrada no estoque registrada ao receber a mercadoria</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Cotação de camarão <small>por kg</small></div>
+            <div class="mk-row"><span>Fornecedor A</span><b>R$ 58,00</b></div>
+            <div class="mk-row"><span>Fornecedor B</span><span class="mk-tag">R$ 52,90</span></div>
+            <div class="mk-row"><span>Fornecedor C</span><b>R$ 61,50</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Desperdício -->
+    <div class="mod-row split">
+      <div>
+        <span class="eyebrow">Módulo 5</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Controle de desperdício</h2>
+        <p class="lead">Relatórios que mostram o que foi perdido, por qual motivo, em que quantidade e quem registrou. Com o desperdício visível, a perda para de virar surpresa.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Registro por motivo, quantidade e responsável</li>
+          <li><span class="ck">✓</span> Baixa automática no estoque a cada perda lançada</li>
+          <li><span class="ck">✓</span> Relatórios que apontam onde o dinheiro está escorrendo</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Perdas da semana</div>
+            <div class="mk-row"><span>Vencimento</span><b>R$ 210</b></div>
+            <div class="mk-row"><span>Quebra no preparo</span><b>R$ 95</b></div>
+            <div class="mk-row"><span>Sobra de salão</span><b>R$ 47</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 Checklist -->
+    <div class="mod-row split rev">
+      <div>
+        <span class="eyebrow">Módulo 6</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Checklist de atividades</h2>
+        <p class="lead">As rotinas operacionais da equipe organizadas em listas claras de abertura, produção e fechamento. Cada um sabe o que fazer, e você acompanha o que foi cumprido.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Rotinas de abertura, produção e fechamento definidas</li>
+          <li><span class="ck">✓</span> Responsável e horário registrados em cada tarefa</li>
+          <li><span class="ck">✓</span> Acompanhamento do que foi feito, direto do painel</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Abertura da cozinha</div>
+            <ul class="mk-list">
+              <li><span class="dot">✓</span> Conferir temperatura das câmaras</li>
+              <li><span class="dot">✓</span> Higienizar bancadas e utensílios</li>
+              <li><span class="dot">✓</span> Separar mise en place do dia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mod-cta"><a href="checkout.html" class="btn btn-primary btn-lg">Assinar agora</a></div>
+
+    <!-- 7 Etiquetagem -->
+    <div class="mod-row split">
+      <div>
+        <span class="eyebrow">Módulo 7</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Etiquetagem automática</h2>
+        <p class="lead">Etiquetas em conformidade com a Vigilância Sanitária sem ninguém precisar digitar validade. O sistema calcula a data e imprime em um toque.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Validade calculada de forma automática por produto</li>
+          <li><span class="ck">✓</span> Padrão exigido pela Vigilância Sanitária já pronto</li>
+          <li><span class="ck">✓</span> Impressão em um clique, sem digitação manual</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Etiqueta gerada</div>
+            <div class="mk-row"><span>Produto</span><b>Molho de tomate</b></div>
+            <div class="mk-row"><span>Manipulação</span><b>24/07</b></div>
+            <div class="mk-row"><span>Validade</span><span class="mk-tag">27/07</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 Guia de produção -->
+    <div class="mod-row split rev">
+      <div>
+        <span class="eyebrow">Módulo 8</span>
+        <h2 style="color:var(--navy);margin:14px 0 12px">Guia de produção</h2>
+        <p class="lead">Fichas com foto e rendimento que padronizam a cozinha. O prato sai igual independente de quem está na praça, do primeiro ao último cliente.</p>
+        <ul class="checklist">
+          <li><span class="ck">✓</span> Foto de referência para cada etapa do preparo</li>
+          <li><span class="ck">✓</span> Rendimento e porcionamento no padrão da casa</li>
+          <li><span class="ck">✓</span> Padronização que mantém a qualidade constante</li>
+        </ul>
+      </div>
+      <div class="split-media">
+        <div class="mock">
+          <div class="mk-card">
+            <div class="mk-h">Ficha de produção <small>base de molho</small></div>
+            <div style="display:flex;gap:10px;margin-bottom:12px">
+              <div class="mk-tab">foto 1</div>
+              <div class="mk-tab">foto 2</div>
+              <div class="mk-tab">foto 3</div>
+            </div>
+            <div class="mk-row"><span>Rendimento</span><b>3,5 litros</b></div>
+            <div class="mk-row"><span>Porções</span><b>28 un</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mod-cta"><a href="checkout.html" class="btn btn-primary btn-lg">Assinar agora</a></div>
+
+  </div>
+</section>
+
+<!-- ================= INTELIGÊNCIA ================= -->
+<section class="block bg-mist">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Inteligência que fecha a conta</span>
+      <h2>Os números que decidem o seu mês, sempre à vista</h2>
+      <p class="lead">Enquanto a operação roda, a Chefix transforma cada lançamento em indicador. Você abre o painel e sabe exatamente onde está o lucro e onde está o risco.</p>
+    </div>
+    <div class="grid g-3">
+      <div class="card hoverable">
+        <h3>CMV em tempo real</h3>
+        <p>O Custo da Mercadoria Vendida atualizado a cada venda e cada compra, para você comparar com a meta sem esperar o fechamento.</p>
+      </div>
+      <div class="card hoverable">
+        <h3>Valor de estoque</h3>
+        <p>Quanto dinheiro está parado na sua despensa neste exato momento, calculado pelo último preço de compra de cada insumo.</p>
+      </div>
+      <div class="card hoverable">
+        <h3>Alertas de vencimento</h3>
+        <p>Avisos do que está perto de vencer, para girar o estoque na hora certa e cortar a perda antes que ela aconteça.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="block">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>8 módulos, sem fidelidade, por R$ 290 por mês</h2>
+      <p>Mais de 100 restaurantes já gerenciam custo, estoque e cardápio com a Chefix. Comece hoje e cancele quando quiser.</p>
+      <a href="checkout.html" class="btn btn-primary btn-lg">Assinar agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo"><svg class="mark" style="color:#fff"><use href="#chefix-mark"/></svg><span class="wm">Chefix</span></a>
+        <p>O sistema inteligente para o setor de alimentação. Gestão completa, prática e lucrativa, feita por quem vive a operação.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3 0 4.1.1 1 .1 1.7.2 2.3.5.6.2 1.1.5 1.6 1s.8 1 1 1.6c.2.6.4 1.3.5 2.3.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 1-.2 1.7-.5 2.3-.2.6-.5 1.1-1 1.6s-1 .8-1.6 1c-.6.2-1.3.4-2.3.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1-.1-1.7-.2-2.3-.5-.6-.2-1.1-.5-1.6-1s-.8-1-1-1.6c-.2-.6-.4-1.3-.5-2.3C2 15 2 14.7 2 12s0-3 .1-4.1c.1-1 .2-1.7.5-2.3.2-.6.5-1.1 1-1.6s1-.8 1.6-1c.6-.2 1.3-.4 2.3-.5C9 2 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2A3.2 3.2 0 1112 8.8a3.2 3.2 0 010 6.4zM17.8 7a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"/></svg></a>
+          <a href="https://wa.me/5500000000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.8 1c-.1.1-.3.2-.5 0-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4s0-.3 0-.4c0-.1-.5-1.3-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.5.5.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Produto</h4>
+        <a href="funcionalidades.html">Funcionalidades</a>
+        <a href="como-funciona.html">Como funciona</a>
+        <a href="planos.html">Planos</a>
+        <a href="consultoria.html">Consultoria</a>
+      </div>
+      <div class="foot-col">
+        <h4>Empresa</h4>
+        <a href="sobre.html">Sobre o Chefix</a>
+        <a href="indique-e-ganhe.html">Indique e ganhe</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="foot-col">
+        <h4>Comece</h4>
+        <a href="checkout.html">Assinar agora</a>
+        <a href="contato.html">Solicitar demonstração</a>
+        <a href="central-de-ajuda.html">Central de ajuda</a>
+        <a href="https://app.chefix.com.br">Área do cliente</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Chefix · Todos os direitos reservados. · CNPJ 00.000.000/0001-00</span>
+      <span><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a> · www.chefix.com.br</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// scroll reveal + mobile menu (opcional)
+document.querySelectorAll('section.block .wrap > *, .grid > *, .co-step').forEach(el=>el.classList.add('reveal'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Assinar o Chefix</title>
+<meta name="description" content="Assine o Chefix com pagamento seguro. Cartão, PIX ou boleto. Sem fidelidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/chefix.css">
+<style>
+  /* header/rodapé enxutos exclusivos do checkout */
+  .co-top{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:40}
+  .co-top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .co-top .secure{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--slate);font-weight:600}
+  .co-top .secure svg{width:16px;height:16px;stroke:var(--green)}
+  .co-back{font-size:14px;color:var(--slate);font-weight:600}
+  .co-back:hover{color:var(--navy)}
+  .co-title{padding:38px 0 8px}
+  .co-title h1{font-size:clamp(24px,3vw,32px);color:var(--navy)}
+  .co-title p{color:var(--slate);margin-top:6px}
+  .steps-mini{display:flex;gap:8px;align-items:center;margin-top:16px;font-size:13px;color:var(--slate);font-weight:600}
+  .steps-mini .dot{width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+  .steps-mini .ln{width:26px;height:2px;background:var(--line)}
+  .co-foot{background:#fff;border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--slate);font-size:13px}
+  .co-foot a{color:var(--slate)}.co-foot a:hover{color:var(--navy)}
+  .parc{display:grid;grid-template-columns:1fr;gap:0}
+  .btn-block{white-space:normal;text-align:center}
+  .steps-mini{flex-wrap:wrap}
+  .co-grid>*{min-width:0}
+  .co-main,.co-summary,.co-step,.summary-card,.pay-panel{min-width:0}
+  .card-visual{max-width:100%}
+  .pix-code{flex-wrap:wrap}
+  @media(max-width:600px){.co-top .secure{display:none}}
+</style>
+</head>
+<body class="checkout-wrap">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="chefix-mark" viewBox="0 0 100 100">
+    <path d="M50 4C25.7 4 6 23.7 6 48s19.7 44 44 44c11.9 0 22.7-4.7 30.6-12.4L66 65C61.8 69 56.2 71.4 50 71.4 37.1 71.4 26.6 60.9 26.6 48S37.1 24.6 50 24.6c6.2 0 11.8 2.4 16 6.4l14.6-14.6C72.7 8.7 61.9 4 50 4z" fill="currentColor"/>
+    <path d="M44 40h16c3.3 0 6 2.7 6 6v6H38v-6c0-3.3 2.7-6 6-6z" fill="#fff"/>
+    <circle cx="42" cy="34" r="9" fill="#fff"/><circle cx="58" cy="34" r="9" fill="#fff"/><circle cx="50" cy="30" r="10" fill="#fff"/>
+    <path d="M34 52l10 12 30-30" fill="none" stroke="#f86c1f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M70 30l8-6-2 12z" fill="#f86c1f"/>
+  </symbol>
+</svg>
+
+<!-- top bar enxuto -->
+<div class="co-top">
+  <div class="wrap">
+    <a href="index.html" class="logo"><svg class="mark" style="color:var(--navy)"><use href="#chefix-mark"/></svg><span class="wm">Chefix</span></a>
+    <div class="secure"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> Ambiente 100% seguro e criptografado</div>
+    <a href="index.html" class="co-back">← Voltar ao site</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="co-title">
+    <span class="eyebrow">Finalizar assinatura</span>
+    <h1>Você está a um passo de profissionalizar sua cozinha</h1>
+    <p>Assinatura mensal do Chefix Completo. Sem fidelidade, cancele quando quiser.</p>
+    <div class="steps-mini"><span class="dot">1</span> Seus dados <span class="ln"></span> <span class="dot">2</span> Pagamento <span class="ln"></span> <span class="dot" style="background:var(--orange)">3</span> Acesso liberado</div>
+  </div>
+
+  <div class="co-grid">
+    <!-- ============ LEFT ============ -->
+    <div class="co-main">
+
+      <!-- STEP 1 -->
+      <div class="co-step">
+        <div class="st-h"><span class="st-n">1</span><h2>Seus dados</h2></div>
+        <div class="field"><label>Nome completo</label><input type="text" placeholder="Como no documento"></div>
+        <div class="field two">
+          <div><label>E-mail</label><input type="email" placeholder="voce@email.com"></div>
+          <div><label>WhatsApp</label><input type="tel" placeholder="(00) 00000-0000"></div>
+        </div>
+        <div class="field two">
+          <div><label>CPF / CNPJ</label><input type="text" placeholder="Somente números"></div>
+          <div><label>Nome do estabelecimento</label><input type="text" placeholder="Seu negócio"></div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="co-step">
+        <div class="st-h"><span class="st-n">2</span><h2>Forma de pagamento</h2></div>
+
+        <div class="pay-methods">
+          <div class="pay-tab active" data-pay="card">
+            <div class="pm-ic"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+            <b>Cartão</b><small>Aprovação na hora</small>
+          </div>
+          <div class="pay-tab" data-pay="pix">
+            <div class="pm-ic"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l4 4-4 4-4-4 4-4zM2 12l4-4 4 4-4 4-4-4zm20 0l-4-4-4 4 4 4 4-4zM12 14l4 4-4 4-4-4 4-4z"/></svg></div>
+            <b>PIX</b><small>Liberação imediata</small>
+          </div>
+          <div class="pay-tab" data-pay="boleto">
+            <div class="pm-ic"><svg viewBox="0 0 24 24" width="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5v14M7 5v14M10 5v14M14 5v14M17 5v14M20 5v14"/></svg></div>
+            <b>Boleto</b><small>Compensa em 1 a 2 dias</small>
+          </div>
+        </div>
+
+        <!-- CARD PANEL -->
+        <div class="pay-panel active" data-panel="card">
+          <div class="card-visual">
+            <span class="card-brand-logo">VISA</span>
+            <div class="chip"></div>
+            <div class="cnum">•••• •••• •••• 0000</div>
+            <div class="crow"><span>TITULAR<b id="cvName">SEU NOME</b></span><span>VALIDADE<b>MM/AA</b></span></div>
+          </div>
+          <div class="field"><label>Número do cartão</label><input type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19"></div>
+          <div class="field"><label>Nome impresso no cartão</label><input type="text" id="cardName" placeholder="Igual ao cartão"></div>
+          <div class="field three">
+            <div><label>Validade</label><input type="text" placeholder="MM/AA" maxlength="5"></div>
+            <div><label>CVV</label><input type="text" inputmode="numeric" placeholder="123" maxlength="4"></div>
+            <div><label>Parcelas</label><select><option>1x de R$ 290,00 (sem juros)</option></select></div>
+          </div>
+          <div class="field"><label>CPF do titular</label><input type="text" inputmode="numeric" placeholder="Somente números"></div>
+        </div>
+
+        <!-- PIX PANEL -->
+        <div class="pay-panel" data-panel="pix">
+          <div class="pix-box">
+            <span class="badge-soft">⚡ Acesso liberado assim que o PIX cair</span>
+            <div class="pix-qr">
+              <svg viewBox="0 0 100 100" width="100%" height="100%" shape-rendering="crispEdges">
+                <rect width="100" height="100" fill="#fff"/>
+                <g fill="#1c3055">
+                  <rect x="6" y="6" width="22" height="22"/><rect x="12" y="12" width="10" height="10" fill="#fff"/>
+                  <rect x="72" y="6" width="22" height="22"/><rect x="78" y="12" width="10" height="10" fill="#fff"/>
+                  <rect x="6" y="72" width="22" height="22"/><rect x="12" y="78" width="10" height="10" fill="#fff"/>
+                  <rect x="36" y="6" width="6" height="6"/><rect x="48" y="6" width="6" height="6"/><rect x="60" y="12" width="6" height="6"/>
+                  <rect x="36" y="18" width="6" height="6"/><rect x="54" y="18" width="6" height="6"/>
+                  <rect x="6" y="36" width="6" height="6"/><rect x="18" y="36" width="6" height="6"/><rect x="30" y="36" width="6" height="6"/><rect x="42" y="36" width="6" height="6"/><rect x="60" y="36" width="6" height="6"/><rect x="72" y="36" width="6" height="6"/><rect x="84" y="36" width="6" height="6"/>
+                  <rect x="12" y="48" width="6" height="6"/><rect x="30" y="48" width="6" height="6"/><rect x="48" y="48" width="6" height="6"/><rect x="66" y="48" width="6" height="6"/><rect x="84" y="48" width="6" height="6"/>
+                  <rect x="6" y="60" width="6" height="6"/><rect x="24" y="60" width="6" height="6"/><rect x="42" y="60" width="6" height="6"/><rect x="54" y="60" width="6" height="6"/><rect x="72" y="60" width="6" height="6"/>
+                  <rect x="36" y="72" width="6" height="6"/><rect x="48" y="72" width="6" height="6"/><rect x="66" y="72" width="6" height="6"/><rect x="84" y="72" width="6" height="6"/>
+                  <rect x="36" y="84" width="6" height="6"/><rect x="54" y="84" width="6" height="6"/><rect x="72" y="84" width="6" height="6"/>
+                </g>
+              </svg>
+            </div>
+            <div class="pix-code">
+              <input type="text" value="00020126360014BR.GOV.BCB.PIX0114chefix@pix.com52040000..." readonly>
+              <button class="btn btn-ghost" type="button" onclick="this.textContent='Copiado ✓'">Copiar</button>
+            </div>
+            <div class="info-row">Escaneie com o app do seu banco ou use o PIX copia e cola.</div>
+          </div>
+        </div>
+
+        <!-- BOLETO PANEL -->
+        <div class="pay-panel" data-panel="boleto">
+          <div class="boleto-box">
+            <span class="badge-soft" style="background:#fdf1e6;color:var(--orange-600)">🧾 Compensação em 1 a 2 dias úteis</span>
+            <p style="margin:16px 0;color:var(--slate);font-size:15px">O boleto será gerado após a confirmação dos dados. Seu acesso é liberado automaticamente assim que o pagamento for compensado.</p>
+            <div class="field" style="max-width:360px;margin:0 auto"><label>CPF / CNPJ do pagador</label><input type="text" placeholder="Somente números"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary btn-lg btn-block" style="font-size:17px;padding:18px">Finalizar assinatura · R$ 290,00</button>
+      <div class="secure-note"><svg viewBox="0 0 24 24" width="16" fill="none" stroke="#5b6b83" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg> Seus dados de pagamento são criptografados e processados por gateway certificado PCI-DSS. O Chefix não armazena o número do seu cartão.</div>
+    </div>
+
+    <!-- ============ RIGHT (SUMMARY) ============ -->
+    <aside class="co-summary">
+      <div class="summary-card">
+        <div class="sc-h">
+          <div class="plan">Plano escolhido</div>
+          <div style="font-size:20px;font-weight:800;margin:2px 0 6px">Chefix Completo</div>
+          <div class="pr">R$ 290,00 <small>/mês</small></div>
+        </div>
+        <div class="sc-b">
+          <div class="sum-row"><span>Assinatura mensal</span><span>R$ 290,00</span></div>
+          <div class="sum-row"><span>Implantação assistida</span><span style="color:var(--green);font-weight:700">Grátis</span></div>
+          <div class="coupon">
+            <input type="text" placeholder="Cupom de desconto">
+            <button class="btn btn-ghost" type="button">Aplicar</button>
+          </div>
+          <div class="sum-row total"><span>Total hoje</span><span>R$ 290,00</span></div>
+          <ul class="sum-incl">
+            <li><span class="ck">✓</span> Todos os 8 módulos operacionais</li>
+            <li><span class="ck">✓</span> CMV em tempo real e valor de estoque</li>
+            <li><span class="ck">✓</span> Etiquetagem e alertas de vencimento</li>
+            <li><span class="ck">✓</span> Usuários da equipe inclusos</li>
+            <li><span class="ck">✓</span> Suporte e implantação assistida</li>
+            <li><span class="ck">✓</span> Sem fidelidade, cancele quando quiser</li>
+          </ul>
+        </div>
+      </div>
+      <div class="trust-badges">
+        <span class="tb">🔒 Pagamento seguro</span>
+        <span class="tb">✓ Dados protegidos (LGPD)</span>
+        <span class="tb">↩ Cancelamento livre</span>
+      </div>
+      <p class="hint center" style="margin-top:14px">É cliente Proattiva ou Torres Fintech? Sua assinatura pode ser <a href="consultoria.html" style="color:var(--orange-600);font-weight:600">gratuita</a>.</p>
+    </aside>
+
+  </div>
+</div>
+
+<div class="co-foot">
+  Precisa de ajuda para assinar? <a href="https://wa.me/5500000000000" style="font-weight:700;color:var(--orange-600)">Fale no WhatsApp</a> · <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a> · © 2026 Chefix
+</div>
+
+<script>
+// troca de método de pagamento
+document.querySelectorAll('.pay-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.pay-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.pay-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector('.pay-panel[data-panel="'+tab.dataset.pay+'"]').classList.add('active');
+  });
+});
+// nome no cartão em tempo real
+const cn=document.getElementById('cardName'), cv=document.getElementById('cvName');
+if(cn) cn.addEventListener('input',()=>cv.textContent=(cn.value||'SEU NOME').toUpperCase());
+</script>
+</body>
+</html>
