@@ -130,7 +130,7 @@ export default function BlogPage() {
           <div className="cta-band">
             <h2>Coloque esse conteúdo em prática com a Chefix</h2>
             <p>Controle de custos, fichas técnicas, estoque e precificação em uma plataforma feita para a sua cozinha.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>

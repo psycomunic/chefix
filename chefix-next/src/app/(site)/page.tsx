@@ -6,7 +6,7 @@ import DemoForm from "@/components/DemoForm";
 export const metadata: Metadata = {
   title: "Chefix | O Sistema Inteligente para o Setor de Alimentação",
   description:
-    "Gestão operacional e financeira para restaurantes, padarias, pizzarias e buffets. Fichas técnicas, CMV em tempo real, estoque, etiquetagem e precificação em um só lugar. Assine online por R$ 290/mês.",
+    "Gestão operacional e financeira para restaurantes, padarias, pizzarias e buffets. Fichas técnicas, CMV em tempo real, estoque, etiquetagem e precificação em um só lugar. Comece grátis por 7 dias.",
   alternates: { canonical: "/" },
 };
 
@@ -67,12 +67,16 @@ export default function HomePage() {
             </p>
             <div className="hero-cta">
               <Link href="/checkout" className="btn btn-primary btn-lg">
-                Assinar por R$ 290/mês
+                Comece grátis
               </Link>
               <a href="#como-funciona" className="btn btn-ghost btn-lg">
                 Ver como funciona
               </a>
             </div>
+            <p className="hero-micro">
+              7 dias grátis. Depois R$ 290/mês, sem fidelidade. Cancele quando
+              quiser.
+            </p>
             <div className="hero-meta">
               <div className="m">
                 <b>+100</b>
@@ -679,6 +683,9 @@ export default function HomePage() {
               </div>
               <ul>
                 <li>
+                  <span className="ck">✓</span> 7 dias grátis para testar
+                </li>
+                <li>
                   <span className="ck">✓</span> Todos os 8 módulos operacionais
                 </li>
                 <li>
@@ -699,7 +706,7 @@ export default function HomePage() {
                 </li>
               </ul>
               <Link href="/checkout" className="btn btn-primary">
-                Assinar agora
+                Comece grátis
               </Link>
             </div>
             <div className="pcard">
@@ -960,17 +967,20 @@ export default function HomePage() {
             </span>
             <h2>O futuro da gestão no setor de alimentação começa aqui</h2>
             <p>
-              Assine em minutos, direto pelo site, e comece a controlar sua
-              operação hoje. Prefere ver antes? Use o formulário ao lado e um
-              especialista fala com você.
+              Comece grátis em minutos, direto pelo site, e controle sua operação
+              já nos 7 primeiros dias. Prefere ver antes? Use o formulário ao lado
+              e um especialista fala com você.
             </p>
             <Link
               href="/checkout"
               className="btn btn-primary btn-lg"
               style={{ marginTop: 26 }}
             >
-              Assinar por R$ 290/mês
+              Comece grátis
             </Link>
+            <p className="hero-micro" style={{ color: "#aab8d0" }}>
+              7 dias grátis. Depois R$ 290/mês, sem fidelidade.
+            </p>
             <div className="assurances">
               <div className="a">
                 <span className="ck">

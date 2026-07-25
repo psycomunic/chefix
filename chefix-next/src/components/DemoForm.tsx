@@ -19,7 +19,7 @@ export default function DemoForm() {
           você pode assinar direto pelo site.
         </p>
         <a href="/checkout" className="btn btn-primary btn-lg btn-block">
-          Assinar por R$ 290/mês
+          Comece grátis
         </a>
       </div>
     );

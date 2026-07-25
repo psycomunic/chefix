@@ -34,11 +34,11 @@ export default function CheckoutPage() {
 
       <div className="wrap">
         <div className="co-title">
-          <span className="eyebrow">Finalizar assinatura</span>
+          <span className="eyebrow">Comece grátis</span>
           <h1>Você está a um passo de profissionalizar sua cozinha</h1>
           <p>
-            Assinatura mensal do Chefix Completo. Sem fidelidade, cancele quando
-            quiser.
+            7 dias grátis do Chefix Completo. Você só é cobrado depois do período
+            de teste. Sem fidelidade, cancele quando quiser.
           </p>
           <div className="steps-mini">
             <span className="dot">1</span> Seus dados <span className="ln" />

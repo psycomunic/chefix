@@ -36,7 +36,7 @@ export default function Header() {
             Login
           </a>
           <Link href="/checkout" className="btn btn-primary">
-            Assinar agora
+            Comece grátis
           </Link>
         </div>
 
@@ -61,7 +61,7 @@ export default function Header() {
           ))}
           <a href={APP_URL}>Login</a>
           <Link href="/checkout" className="btn btn-primary btn-block">
-            Assinar agora
+            Comece grátis
           </Link>
         </nav>
       )}

@@ -76,7 +76,7 @@ export default function ComoFuncionaPage() {
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function ComoFuncionaPage() {
           <div className="cta-band">
             <h2>Pronto para tirar a sua gestão do achismo?</h2>
             <p>Mais de 100 restaurantes já rodam com a Chefix por R$ 290 por mês, sem fidelidade. Cadastre uma vez e veja a informação fluir.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>

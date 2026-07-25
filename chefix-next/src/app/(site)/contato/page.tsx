@@ -251,7 +251,7 @@ export default function ContatoPage() {
               vive a operação.
             </p>
             <Link href="/checkout" className="btn btn-primary btn-lg">
-              Assinar agora
+              Comece grátis
             </Link>
           </div>
         </div>

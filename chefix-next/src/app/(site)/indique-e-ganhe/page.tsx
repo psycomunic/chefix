@@ -139,7 +139,7 @@ export default function IndiquePage() {
           <div className="cta-band">
             <h2>Ainda não usa o Chefix?</h2>
             <p>Assine primeiro, ponha a sua operação no controle e depois indique outros donos de restaurante para ganhar cashback recorrente.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>

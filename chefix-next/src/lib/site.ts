@@ -58,7 +58,7 @@ export const FOOTER_COLS: {
   {
     title: "Comece",
     links: [
-      { label: "Assinar agora", href: "/checkout" },
+      { label: "Comece grátis", href: "/checkout" },
       { label: "Solicitar demonstração", href: "/contato" },
       { label: "Central de ajuda", href: "/central-de-ajuda" },
       { label: "Área do cliente", href: APP_URL, external: true },

@@ -45,7 +45,7 @@ export default function PlanosPage() {
                 <li><span className="ck">✓</span>Suporte e implantação assistida</li>
                 <li><span className="ck">✓</span>Sem fidelidade e sem multa</li>
               </ul>
-              <Link href="/checkout" className="btn btn-primary btn-block" style={{ marginTop: "auto" }}>Assinar agora</Link>
+              <Link href="/checkout" className="btn btn-primary btn-block" style={{ marginTop: "auto" }}>Comece grátis</Link>
             </div>
 
             {/* Proattiva */}
@@ -157,7 +157,7 @@ export default function PlanosPage() {
           <div className="cta-band">
             <h2>Comece hoje</h2>
             <p>Coloque a operação no controle com CMV, estoque e validade em um só lugar. Assinatura por R$ 290 por mês, sem fidelidade.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>

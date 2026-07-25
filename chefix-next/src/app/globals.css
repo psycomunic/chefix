@@ -1017,3 +1017,10 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 @media(max-width:600px){
   .strip{display:none}
 }
+
+/* microcopy sob o CTA (7 dias gratis) */
+.hero-micro{margin-top:14px;font-size:13.5px;color:var(--slate);font-weight:500;max-width:44ch}
+
+/* notas do teste gratis no checkout */
+.co-trialnote{margin-top:10px;text-align:center;font-size:13px;color:var(--green);font-weight:700}
+.co-afterprice{margin-top:10px;font-size:12.5px;color:var(--slate);text-align:center}

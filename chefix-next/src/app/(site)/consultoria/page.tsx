@@ -259,7 +259,7 @@ export default function ConsultoriaPage() {
               R$ 290 por mês e ter toda a gestão do seu negócio numa plataforma só.
             </p>
             <Link href="/checkout" className="btn btn-primary btn-lg">
-              Assinar agora
+              Comece grátis
             </Link>
           </div>
         </div>

@@ -14,9 +14,9 @@ export default function FuncionalidadesPage() {
       {/* HERO */}
       <section className="page-hero center">
         <div className="wrap">
-          <span className="eyebrow">Funcionalidades</span>
-          <h1>Tudo o que a sua cozinha precisa, em um só lugar</h1>
-          <p className="lead">São 8 módulos que conversam entre si para você parar de gerenciar no achismo. Você cadastra uma vez e a informação flui por fichas técnicas, estoque, compras e etiquetagem, com o custo real sempre na sua frente.</p>
+          <span className="eyebrow">Controle de verdade, não achismo</span>
+          <h1>Seu restaurante perde dinheiro todo dia sem você ver.</h1>
+          <p className="lead">O Chefix mostra onde. São 8 módulos que conversam entre si: fichas técnicas, estoque, compras, CMV em tempo real e etiquetagem, com a margem real de cada prato sempre na sua frente.</p>
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function FuncionalidadesPage() {
             </div>
           </div>
 
-          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link></div>
+          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link></div>
 
           {/* 4 Compras */}
           <div className="mod-row split rev">
@@ -175,7 +175,7 @@ export default function FuncionalidadesPage() {
             </div>
           </div>
 
-          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link></div>
+          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link></div>
 
           {/* 7 Etiquetagem */}
           <div className="mod-row split">
@@ -229,7 +229,7 @@ export default function FuncionalidadesPage() {
             </div>
           </div>
 
-          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link></div>
+          <div className="mod-cta"><Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link></div>
 
         </div>
       </section>
@@ -265,7 +265,7 @@ export default function FuncionalidadesPage() {
           <div className="cta-band">
             <h2>8 módulos, sem fidelidade, por R$ 290 por mês</h2>
             <p>Mais de 100 restaurantes já gerenciam custo, estoque e cardápio com a Chefix. Comece hoje e cancele quando quiser.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>

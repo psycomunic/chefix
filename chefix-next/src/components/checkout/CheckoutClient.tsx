@@ -139,10 +139,11 @@ export default function CheckoutClient() {
     return (
       <div className="co-result">
         <div className="co-result-ic ok">✓</div>
-        <h2>Pagamento aprovado. Bem-vindo ao Chefix!</h2>
+        <h2>Teste grátis ativado. Bem-vindo ao Chefix!</h2>
         <p>
-          Sua assinatura está ativa. O acesso ao sistema foi liberado. Você vai
-          receber os dados de acesso por e-mail.
+          Você tem 7 dias grátis com acesso completo. Só vamos cobrar os R$ 290
+          depois desse período, e você pode cancelar antes sem pagar nada. Os
+          dados de acesso vão para o seu e-mail.
         </p>
         <a href={APP_URL} className="btn btn-primary btn-lg">
           Acessar o Chefix →
@@ -459,11 +460,16 @@ export default function CheckoutClient() {
           {pending
             ? "Processando..."
             : method === "card"
-              ? "Finalizar assinatura · R$ 290,00"
+              ? "Começar 7 dias grátis"
               : method === "pix"
                 ? "Gerar PIX · R$ 290,00"
                 : "Gerar boleto · R$ 290,00"}
         </button>
+        {method === "card" && (
+          <p className="co-trialnote">
+            Você só é cobrado depois de 7 dias. Cancele antes e não paga nada.
+          </p>
+        )}
         <div className="secure-note">
           <svg viewBox="0 0 24 24" width="16" fill="none" stroke="#5b6b83" strokeWidth="2">
             <rect x="4" y="10" width="16" height="11" rx="2" />
@@ -492,6 +498,12 @@ export default function CheckoutClient() {
               <span>R$ 290,00</span>
             </div>
             <div className="sum-row">
+              <span>Teste grátis</span>
+              <span style={{ color: "var(--green)", fontWeight: 700 }}>
+                7 dias
+              </span>
+            </div>
+            <div className="sum-row">
               <span>Implantação assistida</span>
               <span style={{ color: "var(--green)", fontWeight: 700 }}>Grátis</span>
             </div>
@@ -507,9 +519,14 @@ export default function CheckoutClient() {
               </button>
             </div>
             <div className="sum-row total">
-              <span>Total hoje</span>
-              <span>R$ 290,00</span>
+              <span>{method === "card" ? "Total hoje" : "Total a pagar"}</span>
+              <span>{method === "card" ? "R$ 0,00" : "R$ 290,00"}</span>
             </div>
+            {method === "card" && (
+              <p className="co-afterprice">
+                Depois dos 7 dias: R$ 290,00/mês. Cancele quando quiser.
+              </p>
+            )}
             <ul className="sum-incl">
               <li>
                 <span className="ck">✓</span> Todos os 8 módulos operacionais

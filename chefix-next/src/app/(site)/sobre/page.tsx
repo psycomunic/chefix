@@ -102,7 +102,7 @@ export default function SobrePage() {
           <div className="cta-band">
             <h2>Pronto para profissionalizar o seu negócio?</h2>
             <p>Comece hoje a usar o sistema feito por quem entende o setor de alimentação de ponta a ponta.</p>
-            <Link href="/checkout" className="btn btn-primary btn-lg">Assinar agora</Link>
+            <Link href="/checkout" className="btn btn-primary btn-lg">Comece grátis</Link>
           </div>
         </div>
       </section>
