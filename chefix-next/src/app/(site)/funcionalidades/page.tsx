@@ -15,8 +15,8 @@ export default function FuncionalidadesPage() {
       <section className="page-hero center">
         <div className="wrap">
           <span className="eyebrow">Controle de verdade, não achismo</span>
-          <h1>Seu restaurante perde dinheiro todo dia sem você ver.</h1>
-          <p className="lead">O Chefix mostra onde. São 8 módulos que conversam entre si: fichas técnicas, estoque, compras, CMV em tempo real e etiquetagem, com a margem real de cada prato sempre na sua frente.</p>
+          <h1>Pare de perder lucro no achismo.</h1>
+          <p className="lead">São 8 módulos que conversam entre si: fichas técnicas, estoque, compras, CMV em tempo real e etiquetagem, com a margem real de cada prato sempre na sua frente.</p>
         </div>
       </section>
 

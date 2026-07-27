@@ -57,13 +57,13 @@ export default function HomePage() {
               O sistema inteligente para o setor de alimentação
             </span>
             <h1>
-              A cozinha produz. <br />O <span className="hl">Chefix cuida</span> do
-              resto.
+              Seu restaurante <span className="hl">perde dinheiro</span> todo dia
+              sem você ver.
             </h1>
             <p className="lead">
-              Fichas técnicas, estoque, CMV em tempo real, precificação e
-              etiquetagem em uma só plataforma, criada por quem vive a operação de
-              restaurante todos os dias.
+              O Chefix mostra onde. Fichas técnicas, estoque, CMV em tempo real,
+              precificação e etiquetagem em uma só plataforma, criada por quem vive
+              a operação de restaurante todos os dias.
             </p>
             <div className="hero-cta">
               <Link href="/checkout" className="btn btn-primary btn-lg">
