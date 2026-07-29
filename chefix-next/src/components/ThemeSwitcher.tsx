@@ -3,32 +3,68 @@
 import { useEffect, useState } from "react";
 
 /**
- * Seletor de tema para PREVIEW (Claro / Escuro / Laranja).
- * Aplica data-theme no <html> e persiste em localStorage.
- * Ferramenta de comparação visual; não é parte fixa do produto.
+ * Tema automático por horário: a partir das 18h fica ESCURO; durante o dia, CLARO.
+ * Recalcula ao abrir, a cada minuto e quando a aba volta ao foco.
+ * O usuário pode forçar Claro/Escuro (override manual) ou voltar ao Automático.
  */
-const THEMES = [
-  { id: "light", label: "Claro" },
-  { id: "dark", label: "Escuro" },
-  { id: "orange", label: "Laranja" },
-] as const;
+type Theme = "light" | "dark";
 
-type ThemeId = (typeof THEMES)[number]["id"];
+function autoTheme(): Theme {
+  const h = new Date().getHours();
+  return h >= 18 || h < 6 ? "dark" : "light";
+}
+
+function apply(t: Theme) {
+  document.documentElement.dataset.theme = t;
+}
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState<ThemeId>("light");
+  const [manual, setManual] = useState<Theme | null>(null);
+  const [current, setCurrent] = useState<Theme>("light");
   const [open, setOpen] = useState(false);
 
+  // carrega preferência salva (ou limpa valores antigos, ex.: "orange")
   useEffect(() => {
-    const stored = (localStorage.getItem("chefix-theme") as ThemeId) || "light";
-    setTheme(stored);
-    document.documentElement.dataset.theme = stored;
+    const stored = localStorage.getItem("chefix-theme");
+    const m: Theme | null =
+      stored === "light" || stored === "dark" ? stored : null;
+    if (stored && !m) localStorage.removeItem("chefix-theme");
+    setManual(m);
+    const applied = m ?? autoTheme();
+    setCurrent(applied);
+    apply(applied);
   }, []);
 
-  function apply(t: ThemeId) {
-    setTheme(t);
-    document.documentElement.dataset.theme = t;
+  // modo automático: acompanha o horário enquanto não houver override manual
+  useEffect(() => {
+    if (manual) return;
+    const tick = () => {
+      const a = autoTheme();
+      setCurrent(a);
+      apply(a);
+    };
+    tick();
+    const id = window.setInterval(tick, 60000);
+    document.addEventListener("visibilitychange", tick);
+    return () => {
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", tick);
+    };
+  }, [manual]);
+
+  function pick(t: Theme) {
+    setManual(t);
+    setCurrent(t);
+    apply(t);
     localStorage.setItem("chefix-theme", t);
+  }
+
+  function useAuto() {
+    setManual(null);
+    localStorage.removeItem("chefix-theme");
+    const a = autoTheme();
+    setCurrent(a);
+    apply(a);
   }
 
   return (
@@ -39,21 +75,33 @@ export default function ThemeSwitcher() {
         aria-label="Trocar tema de cores"
         aria-expanded={open}
       >
-        <span className={`tsw-dot ${theme}`} />
+        <span className={`tsw-dot ${current}`} />
         Tema
       </button>
       <div className="theme-options" role="group" aria-label="Tema de cores">
-        {THEMES.map((t) => (
-          <button
-            key={t.id}
-            className={`tsw${theme === t.id ? " on" : ""}`}
-            onClick={() => apply(t.id)}
-            aria-pressed={theme === t.id}
-          >
-            <span className={`tsw-dot ${t.id}`} />
-            {t.label}
-          </button>
-        ))}
+        <button
+          className={`tsw${current === "light" ? " on" : ""}`}
+          onClick={() => pick("light")}
+          aria-pressed={current === "light"}
+        >
+          <span className="tsw-dot light" />
+          Claro
+        </button>
+        <button
+          className={`tsw${current === "dark" ? " on" : ""}`}
+          onClick={() => pick("dark")}
+          aria-pressed={current === "dark"}
+        >
+          <span className="tsw-dot dark" />
+          Escuro
+        </button>
+        <button
+          className={`tsw tsw-auto${manual === null ? " on" : ""}`}
+          onClick={useAuto}
+          aria-pressed={manual === null}
+        >
+          {manual === null ? "● " : ""}Automático (18h → escuro)
+        </button>
       </div>
     </div>
   );

@@ -67,7 +67,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "(function(){try{var t=localStorage.getItem('chefix-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();",
+              "(function(){try{var s=localStorage.getItem('chefix-theme');var h=new Date().getHours();var t=(s==='light'||s==='dark')?s:((h>=18||h<6)?'dark':'light');document.documentElement.dataset.theme=t;}catch(e){}})();",
           }}
         />
         <script

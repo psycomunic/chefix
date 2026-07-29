@@ -1151,17 +1151,9 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 [data-theme="dark"] :is(h1,h2,h3,.ph,.rkpi b,.kpi .val,.pcard .price .big,.ip-title,.ip-nm,.ip-cu,.ifeat-kpi b,.ifeat-hd h3,.sum-row,.sum-row.total,.hero-meta .m b,.node b,.pcard li,.tcard .who b,.card p,.icard p,.rcard p,.fcol p,.tcard p,.co-back,.co-result p){color:var(--ink)}
 [data-theme="dark"] .pchip{background:#16233c;border-color:var(--line);color:var(--ink)}
 
-/* ------------------- MODO LARANJA ------------------- */
-[data-theme="orange"]{--paper:#f97c2a;--mist:#f06f1b;--mist-2:#e56410;--ink:#26160a;--slate:#5a3a20;--line:rgba(0,0,0,.12)}
-[data-theme="orange"] body{background:var(--paper);color:var(--ink)}
-[data-theme="orange"] header.site{background:rgba(249,124,42,.9);border-bottom-color:rgba(0,0,0,.1)}
-[data-theme="orange"] .menu{color:#3a1c07}
-[data-theme="orange"] .menu a:hover,[data-theme="orange"] .menu a.active{color:#26160a}
-/* hero: veu laranja sobre a imagem */
-[data-theme="orange"] .hero{background-color:#f97c2a;background-image:linear-gradient(90deg,#f97c2a 0%,#f97c2a 40%,rgba(249,124,42,.6) 56%,rgba(249,124,42,.1) 75%),url(/ipad.png)}
-[data-theme="orange"] .ai-badge{background:#fff;border-color:rgba(0,0,0,.12);color:#e35c12}
-/* mantem cards brancos (contraste) e a barra de segmentos */
-[data-theme="orange"] .trust{background:#fff}
+/* seletor: botao Automatico */
+.tsw-auto{font-size:12px;color:#5b6b83;border-top:1px solid #e7ebf1;margin-top:3px;padding-top:11px}
+.tsw-auto.on{color:#e35c12;font-weight:800}
 
 /* ------------------- CORREÇÕES DE CONTRASTE (escuro/laranja) ------------------- */
 
@@ -1177,16 +1169,4 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 [data-theme="dark"] .pcard .subt,[data-theme="dark"] .pcard .price .per,[data-theme="dark"] .hint,[data-theme="dark"] .breadcrumb{color:var(--slate)}
 [data-theme="dark"] .co-title p{color:var(--slate)}
 
-/* MODO LARANJA */
-[data-theme="orange"]{--slate:#3f2409}
-[data-theme="orange"] .eyebrow{color:#6e2900}
-[data-theme="orange"] .bg-navy .eyebrow{color:#ffd9c2}
-[data-theme="orange"] .bg-navy .lead{color:#c8d3e6}
-/* botao primario nao pode se fundir com o fundo laranja: anel branco + sombra */
-[data-theme="orange"] .btn-primary{box-shadow:0 0 0 2px rgba(255,255,255,.9),0 12px 26px -10px rgba(0,0,0,.4)}
-[data-theme="orange"] .btn-primary:hover{box-shadow:0 0 0 2px #fff,0 14px 28px -10px rgba(0,0,0,.45)}
-[data-theme="orange"] .btn-ghost{color:var(--navy);border-color:rgba(0,0,0,.3);background:rgba(255,255,255,.35)}
-[data-theme="orange"] .btn-ghost:hover{background:#fff;border-color:var(--navy)}
-[data-theme="orange"] .hero h1 .hl{color:var(--navy)}
-[data-theme="orange"] .hero h1 .hl::after{background:rgba(0,0,0,.14)}
-[data-theme="orange"] .hero-micro{color:#3a1c07}
+
