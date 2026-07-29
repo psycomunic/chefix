@@ -16,6 +16,14 @@ const faqLd = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "Como funciona o assistente de IA no WhatsApp?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Você conversa no WhatsApp em português. A IA do Chefix responde com os números reais da sua operação (lucro, CMV, estoque), sugere a lista de compras certa e avisa sobre validade e desperdício antes do prejuízo acontecer.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Preciso de algum equipamento especial?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -53,24 +61,27 @@ export default function HomePage() {
       <section className="hero">
         <div className="wrap">
           <div className="hero-copy">
+            <span className="ai-badge">
+              <span className="ai-dot" /> Novo: assistente de IA no WhatsApp
+            </span>
             <span className="eyebrow">
-              O sistema inteligente para o setor de alimentação
+              A plataforma operacional com IA para restaurantes
             </span>
             <h1>
-              Seu restaurante <span className="hl">perde dinheiro</span> todo dia
-              sem você ver.
+              Seu restaurante pode <span className="hl">lucrar mais</span>. A IA do
+              Chefix mostra como.
             </h1>
             <p className="lead">
-              O Chefix mostra onde. Fichas técnicas, estoque, CMV em tempo real,
-              precificação e etiquetagem em uma só plataforma, criada por quem vive
-              a operação de restaurante todos os dias.
+              Menos desperdício, CMV sob controle e mais dinheiro no fim do mês. O
+              assistente de IA organiza estoque, compras e fichas técnicas, e
+              responde tudo pelo WhatsApp.
             </p>
             <div className="hero-cta">
               <Link href="/checkout" className="btn btn-primary btn-lg">
-                Comece grátis
+                Quero aumentar meu lucro
               </Link>
-              <a href="#como-funciona" className="btn btn-ghost btn-lg">
-                Ver como funciona
+              <a href="#ia" className="btn btn-ghost btn-lg">
+                Ver a IA em ação
               </a>
             </div>
             <p className="hero-micro">
@@ -115,33 +126,103 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* ============ IA (WHATSAPP) ============ */}
+      <section className="block ai-sec bg-navy" id="ia">
+        <div className="wrap ai-grid">
+          <div className="ai-copy">
+            <span className="eyebrow">Inteligência artificial</span>
+            <h2>Um gerente que nunca dorme, direto no seu WhatsApp</h2>
+            <p className="lead">
+              Pergunte do jeito que você fala. A IA do Chefix responde com os
+              números reais da sua operação, sugere a compra certa e avisa antes
+              do prejuízo acontecer.
+            </p>
+            <ul className="ai-list">
+              <li>
+                <span className="ck">✓</span> Responde quanto você lucrou e onde
+                está vazando dinheiro
+              </li>
+              <li>
+                <span className="ck">✓</span> Monta a lista de compras na medida
+                certa, sem sobra nem falta
+              </li>
+              <li>
+                <span className="ck">✓</span> Alerta validade, CMV alto e
+                desperdício em tempo real
+              </li>
+            </ul>
+            <Link href="/checkout" className="btn btn-primary btn-lg">
+              Quero a IA no meu restaurante
+            </Link>
+          </div>
+
+          <div className="ai-phone">
+            <div className="wa-chat">
+              <div className="wa-top">
+                <span className="wa-av">
+                  <svg style={{ color: "#fff" }} aria-hidden="true">
+                    <use href="#chefix-mark" />
+                  </svg>
+                </span>
+                <div className="wa-id">
+                  <b>Chefix IA</b>
+                  <span>online agora</span>
+                </div>
+              </div>
+              <div className="wa-body">
+                <div className="wa-msg out">Quanto lucrei essa semana?</div>
+                <div className="wa-msg in">
+                  Você faturou <b>R$ 32.400</b> e o lucro foi{" "}
+                  <b>R$ 9.180 (28%)</b>. O CMV subiu 2 p.p.: a muçarela pesou.
+                </div>
+                <div className="wa-msg out">O que preciso comprar pro fim de semana?</div>
+                <div className="wa-msg in">
+                  Faltam 3 itens: muçarela (12kg), tomate pelati (8 latas) e
+                  farinha (25kg). Quer que eu gere o pedido?
+                </div>
+                <div className="wa-alert">
+                  ⚠️ Tomate pelati vence em 2 dias. Use antes ou remaneje.
+                </div>
+              </div>
+              <div className="wa-input">
+                <span>Pergunte à IA do Chefix...</span>
+                <i className="wa-send" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ PROBLEM ============ */}
       <section className="block problem">
         <div className="wrap">
           <div>
-            <span className="eyebrow">O problema de sempre</span>
-            <h2>Gestão em dez planilhas não é gestão. É torcida.</h2>
+            <span className="eyebrow">A rotina de quem toca um restaurante</span>
+            <h2>Todo dia sai dinheiro pela porta dos fundos.</h2>
             <p>
-              Quando o custo mora numa planilha, a validade num caderno e a compra
-              na cabeça do gerente, a conta só fecha no fim do mês, quando já é
-              tarde para agir.
+              Não é falta de esforço. É falta de controle. Sem número na mão, o
+              prejuízo só aparece no fim do mês, quando já é tarde para agir.
             </p>
             <ul className="pain-list">
               <li>
-                <span className="x">✕</span> CMV descoberto só depois que o lucro
-                já foi embora
+                <span className="x">✕</span> Você compra no susto: sobra o que
+                estraga e falta o que vende
               </li>
               <li>
-                <span className="x">✕</span> Retrabalho: o mesmo insumo cadastrado
-                três vezes, de três jeitos
+                <span className="x">✕</span> Estoque desorganizado e dinheiro
+                parado na prateleira sem você saber
               </li>
               <li>
-                <span className="x">✕</span> Perdas por vencimento que ninguém viu
-                chegar
+                <span className="x">✕</span> O lucro vem menor do que parecia, e
+                você não sabe por quê
               </li>
               <li>
-                <span className="x">✕</span> Preço de venda no "achismo", sem saber
-                a margem real
+                <span className="x">✕</span> Tudo depende do gerente: se ele falta,
+                a operação trava
+              </li>
+              <li>
+                <span className="x">✕</span> Cada decisão no achismo, porque o
+                número nunca está na mão
               </li>
             </ul>
           </div>
@@ -180,12 +261,63 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ RESULTS / TRANSFORMATION ============ */}
+      <section className="block results">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="eyebrow">Do achismo ao controle</span>
+            <h2>O que muda no fim do mês</h2>
+            <p className="lead">
+              O dono de restaurante não compra "controle de estoque". Compra
+              tranquilidade, economia e mais dinheiro no caixa. É isso que o
+              Chefix entrega.
+            </p>
+          </div>
+          <div className="results-grid">
+            <div className="rcard">
+              <div className="rkpi">
+                até <b>30%</b> menos
+              </div>
+              <h3>Desperdício sob controle</h3>
+              <p>
+                A IA avisa o que está prestes a vencer e o que sobra sem girar.
+                Você usa antes de jogar dinheiro no lixo.
+              </p>
+            </div>
+            <div className="rcard feature">
+              <div className="rkpi">
+                CMV em <b>tempo real</b>
+              </div>
+              <h3>Custo na mão, todo dia</h3>
+              <p>
+                Saiba a margem real de cada prato na hora. Ajuste preço e
+                cardápio com número, não com achismo.
+              </p>
+            </div>
+            <div className="rcard">
+              <div className="rkpi">
+                <b>+</b> lucro/mês
+              </div>
+              <h3>Mais dinheiro no caixa</h3>
+              <p>
+                Comprando certo, precificando certo e cortando perda, sobra mais
+                no fim do mês. Simples assim.
+              </p>
+            </div>
+          </div>
+          <p className="results-note">
+            Números variam por operação. Peça uma simulação com os dados do seu
+            restaurante.
+          </p>
+        </div>
+      </section>
+
       {/* ============ FEATURES (BENTO GLASS) ============ */}
       <section className="block fbento" id="funcionalidades">
         <div className="wrap">
           <div className="sec-head">
-            <span className="eyebrow">Uma plataforma, controle total</span>
-            <h2>Ferramentas poderosas para o controle da operação</h2>
+            <span className="eyebrow">Como o Chefix faz acontecer</span>
+            <h2>8 módulos trabalhando juntos pelo seu lucro</h2>
             <p className="lead">
               Oito módulos que conversam entre si. Você cadastra uma vez e a
               informação flui do recebimento até o relatório.
@@ -594,6 +726,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============ DEMO VIDEO ============ */}
+      <section className="block video-sec bg-mist">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="eyebrow">Veja funcionando</span>
+            <h2>O Chefix em ação, em 2 minutos</h2>
+            <p className="lead">
+              Do cadastro do insumo à IA respondendo no WhatsApp. Veja como fica
+              simples controlar a operação inteira.
+            </p>
+          </div>
+          {/* TODO: trocar o data-video pelo embed real (YouTube/Vimeo/MP4) enviado pelo cliente */}
+          <div className="video-frame" data-video="pendente">
+            <div className="video-poster">
+              <button className="video-play" aria-label="Assistir demonstração">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+              <span className="video-cap">Demonstração do Chefix</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ CONSULTORIA MODULES ============ */}
       <section className="block mods" id="consultoria">
         <div className="wrap">
@@ -655,6 +812,81 @@ export default function HomePage() {
                 🔒 Visível apenas para clientes Torres Fintech
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ COMPARISON ============ */}
+      <section className="block compare">
+        <div className="wrap">
+          <div className="sec-head">
+            <span className="eyebrow">Por que trocar</span>
+            <h2>Planilha controla. O Chefix faz seu restaurante lucrar.</h2>
+            <p className="lead">
+              Sistema tradicional te dá relatório. O Chefix te dá decisão, com IA
+              trabalhando junto.
+            </p>
+          </div>
+          <div className="compare-wrap">
+            <table className="compare-table">
+              <thead>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>Planilhas</th>
+                  <th>Sistema tradicional</th>
+                  <th className="hi">Chefix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CMV em tempo real</td>
+                  <td className="no">✕</td>
+                  <td className="mid">Parcial</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Assistente de IA no WhatsApp</td>
+                  <td className="no">✕</td>
+                  <td className="no">✕</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Alerta de desperdício e validade</td>
+                  <td className="no">✕</td>
+                  <td className="mid">Manual</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Cadastro único (sem retrabalho)</td>
+                  <td className="no">✕</td>
+                  <td className="mid">Parcial</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Etiquetagem dentro da norma</td>
+                  <td className="no">✕</td>
+                  <td className="mid">Depende</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Feito por quem vive a operação</td>
+                  <td className="no">✕</td>
+                  <td className="no">✕</td>
+                  <td className="yes hi">✓</td>
+                </tr>
+                <tr>
+                  <td>Depende de você o tempo todo</td>
+                  <td className="no">Sempre</td>
+                  <td className="mid">Muito</td>
+                  <td className="yes hi">A IA ajuda</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="compare-cta">
+            <Link href="/checkout" className="btn btn-primary btn-lg">
+              Quero aumentar meu lucro
+            </Link>
           </div>
         </div>
       </section>
@@ -894,6 +1126,18 @@ export default function HomePage() {
           </div>
           <details className="acc" open>
             <summary>
+              Como funciona o assistente de IA no WhatsApp?{" "}
+              <span className="pm">+</span>
+            </summary>
+            <div className="a-body">
+              Você conversa no WhatsApp em português, do jeito que fala. A IA do
+              Chefix responde com os números reais da sua operação (lucro, CMV,
+              estoque), sugere a lista de compras certa e avisa sobre validade e
+              desperdício antes do prejuízo acontecer.
+            </div>
+          </details>
+          <details className="acc">
+            <summary>
               Preciso de algum equipamento especial? <span className="pm">+</span>
             </summary>
             <div className="a-body">
@@ -965,18 +1209,18 @@ export default function HomePage() {
             <span className="eyebrow" style={{ color: "#ff9a5c" }}>
               Comece agora
             </span>
-            <h2>O futuro da gestão no setor de alimentação começa aqui</h2>
+            <h2>Pronto para lucrar mais no seu restaurante?</h2>
             <p>
-              Comece grátis em minutos, direto pelo site, e controle sua operação
-              já nos 7 primeiros dias. Prefere ver antes? Use o formulário ao lado
-              e um especialista fala com você.
+              Ative os 7 dias grátis em minutos e deixe a IA do Chefix cuidar da
+              operação por você. Prefere ver antes? Use o formulário ao lado e um
+              especialista fala com você.
             </p>
             <Link
               href="/checkout"
               className="btn btn-primary btn-lg"
               style={{ marginTop: 26 }}
             >
-              Comece grátis
+              Quero aumentar meu lucro
             </Link>
             <p className="hero-micro" style={{ color: "#aab8d0" }}>
               7 dias grátis. Depois R$ 290/mês, sem fidelidade.
