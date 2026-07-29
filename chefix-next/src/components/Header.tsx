@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 import { APP_URL, NAV_ITEMS } from "@/lib/site";
 
 /** Header sticky com navegação, link ativo e menu mobile. */
@@ -32,6 +33,7 @@ export default function Header() {
         </nav>
 
         <div className="nav-cta">
+          <ThemeToggle />
           <a href={APP_URL} className="login">
             Login
           </a>

@@ -3,7 +3,6 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import BrandSymbol from "@/components/BrandSymbol";
 import Reveal from "@/components/Reveal";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -77,7 +76,6 @@ export default function RootLayout({
         <BrandSymbol />
         {children}
         <Reveal />
-        <ThemeSwitcher />
       </body>
     </html>
   );
