@@ -1111,3 +1111,54 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 .compare-table td.mid{color:var(--slate);font-weight:600}
 .compare-table tbody tr:last-child td{border-bottom:0}
 .compare-cta{text-align:center;margin-top:28px}
+
+/* ==========================================================================
+   PREVIEW DE TEMAS · seletor + modo escuro + modo laranja
+   ========================================================================== */
+.theme-switch{position:fixed;right:16px;bottom:16px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#131b2b;border:1px solid #e7ebf1;border-radius:30px;padding:9px 15px;font-size:13px;font-weight:800;box-shadow:0 10px 30px rgba(20,32,55,.18);cursor:pointer}
+.theme-options{display:none;flex-direction:column;gap:3px;background:#fff;border:1px solid #e7ebf1;border-radius:14px;padding:6px;box-shadow:0 20px 50px rgba(20,32,55,.25);min-width:156px}
+.theme-switch.open .theme-options{display:flex}
+.tsw{display:flex;align-items:center;gap:10px;background:none;border:0;border-radius:9px;padding:9px 12px;font-size:13.5px;font-weight:600;color:#131b2b;cursor:pointer;text-align:left;width:100%}
+.tsw:hover{background:#f5f7fa}
+.tsw.on{background:#fff2e9;font-weight:800;color:#e35c12}
+.tsw-dot{width:16px;height:16px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.18)}
+.tsw-dot.light{background:#fff}
+.tsw-dot.dark{background:#0f1a2e}
+.tsw-dot.orange{background:#f97c2a}
+
+/* ------------------- MODO ESCURO ------------------- */
+[data-theme="dark"]{--paper:#0f1a2e;--mist:#13203a;--mist-2:#182844;--ink:#e9eef7;--slate:#a6b6cf;--line:#26344f}
+[data-theme="dark"] body{background:var(--paper);color:var(--ink)}
+[data-theme="dark"] header.site{background:rgba(15,26,46,.85);border-bottom-color:var(--line)}
+[data-theme="dark"] .menu{color:#c3cee0}
+[data-theme="dark"] .menu a:hover,[data-theme="dark"] .menu a.active{color:#fff}
+[data-theme="dark"] .logo,[data-theme="dark"] .nav-cta .login{color:var(--ink)}
+/* hero: veu escuro sobre a imagem do ipad */
+[data-theme="dark"] .hero{background-color:#0f1a2e;background-image:linear-gradient(90deg,#0f1a2e 0%,#0f1a2e 40%,rgba(15,26,46,.8) 56%,rgba(15,26,46,.28) 75%),url(/ipad.png)}
+[data-theme="dark"] .hero h1,[data-theme="dark"] .hero .lead{color:var(--ink)}
+[data-theme="dark"] .ai-badge{background:rgba(248,108,31,.16);color:#ffb27a;border-color:rgba(248,108,31,.4)}
+/* superficies claras -> escuras (exceto WhatsApp, etiquetas fisicas e QR) */
+[data-theme="dark"] :is(.card,.pcard,.icard,.fcol,.tcard,.rcard,.ifeat,.summary-card,.co-step,.co-result,.acc,.form-card,.insumos-panel,.hero-meta,.trust,.video-frame,.menu-mobile,.chartcard,.kpi,.rowlist,.node,.compare-table,.panel,.pg-func .mock .mk-card,.pg-como .flow .b-card){background:#16233c;border-color:var(--line)}
+[data-theme="dark"] :is(.field input,.field select,.field textarea){background:#16233c;border-color:var(--line);color:var(--ink)}
+[data-theme="dark"] .compare-table thead th{background:#1a2a49;color:var(--slate)}
+[data-theme="dark"] .compare-table thead th.hi{background:#22406e;color:#fff}
+[data-theme="dark"] .compare-table td.hi{background:#2a2013}
+[data-theme="dark"] .chip{background:#16233c;border-color:var(--line);color:var(--ink)}
+[data-theme="dark"] .co-top,[data-theme="dark"] .co-foot,[data-theme="dark"] .checkout-wrap{background:var(--paper)}
+[data-theme="dark"] .co-top{border-bottom-color:var(--line)}
+/* textos navy -> claros */
+[data-theme="dark"] :is(h1,h2,h3,.ph,.rkpi b,.kpi .val,.pcard .price .big,.ip-title,.ip-nm,.ip-cu,.ifeat-kpi b,.ifeat-hd h3,.sum-row,.sum-row.total,.hero-meta .m b,.node b,.pcard li,.tcard .who b,.card p,.icard p,.rcard p,.fcol p,.tcard p,.co-back,.co-result p){color:var(--ink)}
+[data-theme="dark"] .pchip{background:#16233c;border-color:var(--line);color:var(--ink)}
+
+/* ------------------- MODO LARANJA ------------------- */
+[data-theme="orange"]{--paper:#f97c2a;--mist:#f06f1b;--mist-2:#e56410;--ink:#26160a;--slate:#5a3a20;--line:rgba(0,0,0,.12)}
+[data-theme="orange"] body{background:var(--paper);color:var(--ink)}
+[data-theme="orange"] header.site{background:rgba(249,124,42,.9);border-bottom-color:rgba(0,0,0,.1)}
+[data-theme="orange"] .menu{color:#3a1c07}
+[data-theme="orange"] .menu a:hover,[data-theme="orange"] .menu a.active{color:#26160a}
+/* hero: veu laranja sobre a imagem */
+[data-theme="orange"] .hero{background-color:#f97c2a;background-image:linear-gradient(90deg,#f97c2a 0%,#f97c2a 40%,rgba(249,124,42,.6) 56%,rgba(249,124,42,.1) 75%),url(/ipad.png)}
+[data-theme="orange"] .ai-badge{background:#fff;border-color:rgba(0,0,0,.12);color:#e35c12}
+/* mantem cards brancos (contraste) e a barra de segmentos */
+[data-theme="orange"] .trust{background:#fff}

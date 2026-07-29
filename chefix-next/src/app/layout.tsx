@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import BrandSymbol from "@/components/BrandSymbol";
 import Reveal from "@/components/Reveal";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -64,12 +65,19 @@ export default function RootLayout({
     <html lang="pt-BR" className={manrope.variable}>
       <body>
         <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('chefix-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();",
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
         <BrandSymbol />
         {children}
         <Reveal />
+        <ThemeSwitcher />
       </body>
     </html>
   );
