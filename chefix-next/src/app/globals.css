@@ -1175,3 +1175,23 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 .marquee .chip{flex:none}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+/* resultados: emoji + CTA de secao */
+.rcard .ric{font-size:34px;line-height:1;margin-bottom:14px}
+.sec-cta{text-align:center;margin-top:42px}
+.sec-cta-note{margin-top:12px;font-size:13.5px;color:var(--slate);font-weight:500}
+
+/* animacao: etiqueta saindo da impressora (planos) */
+.printer-anim{display:flex;justify-content:center;margin-top:36px}
+.printer{position:relative;width:210px;height:190px}
+.printer-body{position:absolute;top:0;left:0;right:0;height:80px;background:linear-gradient(180deg,#26477a,var(--navy));border-radius:16px 16px 10px 10px;box-shadow:var(--shadow-lg);display:flex;align-items:flex-start;justify-content:center;padding-top:13px;color:#fff;font-weight:800;letter-spacing:.02em;z-index:2}
+.printer-slot{position:absolute;left:50%;transform:translateX(-50%);top:68px;width:158px;height:8px;background:#0c1830;border-radius:4px;z-index:3}
+.etq-out{position:absolute;left:50%;top:66px;width:156px;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 8px 8px;box-shadow:var(--shadow-md);padding:10px 12px;z-index:1;animation:printOut 4.5s ease-in-out infinite}
+.etq-out-h{font-size:9px;font-weight:800;letter-spacing:.08em;color:var(--navy)}
+.etq-out b{display:block;font-size:12.5px;color:var(--ink);margin:2px 0 5px}
+.etq-out-bar{height:16px;background:repeating-linear-gradient(90deg,#131b2b 0 2px,transparent 2px 4px);margin-bottom:6px}
+.etq-out-v{display:flex;justify-content:space-between;font-size:9.5px}
+.etq-out-v small{color:var(--slate);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.etq-out-v span{color:var(--orange-600);font-weight:800}
+@keyframes printOut{0%{transform:translateX(-50%) translateY(-92px);opacity:0}15%{opacity:1}55%{transform:translateX(-50%) translateY(8px);opacity:1}85%{transform:translateX(-50%) translateY(8px);opacity:1}100%{transform:translateX(-50%) translateY(8px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.etq-out{animation:none;transform:translateX(-50%) translateY(8px);opacity:1}}

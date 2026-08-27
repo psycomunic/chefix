@@ -26,7 +26,6 @@ export const PLAN = {
 /** Itens da navegação principal (header). */
 export const NAV_ITEMS: { label: string; href: string }[] = [
   { label: "Funcionalidades", href: "/funcionalidades" },
-  { label: "Como funciona", href: "/como-funciona" },
   { label: "Consultoria", href: "/consultoria" },
   { label: "Planos", href: "/planos" },
   { label: "Indique e ganhe", href: "/indique-e-ganhe" },
@@ -41,7 +40,6 @@ export const FOOTER_COLS: {
     title: "Produto",
     links: [
       { label: "Funcionalidades", href: "/funcionalidades" },
-      { label: "Como funciona", href: "/como-funciona" },
       { label: "Planos", href: "/planos" },
       { label: "Consultoria", href: "/consultoria" },
     ],

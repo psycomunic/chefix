@@ -17,6 +17,22 @@ export default function PlanosPage() {
           <span className="eyebrow">Planos</span>
           <h1>Gestão profissional ao seu alcance</h1>
           <p className="lead">Preço simples e sem letras miúdas: R$ 290 por mês, com todos os módulos inclusos e sem fidelidade. E se você já é cliente de consultoria da Proattiva ou da Torres Fintech, a plataforma completa sai de graça enquanto o contrato estiver ativo.</p>
+
+          <div className="printer-anim" aria-hidden="true">
+            <div className="printer">
+              <div className="etq-out">
+                <div className="etq-out-h">MANIPULADO</div>
+                <b>Molho Bolonhesa</b>
+                <div className="etq-out-bar" />
+                <div className="etq-out-v">
+                  <small>Validade</small>
+                  <span>27/07/2026</span>
+                </div>
+              </div>
+              <div className="printer-body">Chefix</div>
+              <div className="printer-slot" />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -16,14 +16,6 @@ const faqLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Como funciona o assistente de IA no WhatsApp?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Você conversa no WhatsApp em português. A IA do Chefix responde com os números reais da sua operação (lucro, CMV, estoque), sugere a lista de compras certa e avisa sobre validade e desperdício antes do prejuízo acontecer.",
-      },
-    },
-    {
-      "@type": "Question",
       name: "Preciso de algum equipamento especial?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -195,73 +187,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============ IA (WHATSAPP) ============ */}
-      <section className="block ai-sec bg-navy" id="ia">
-        <div className="wrap ai-grid">
-          <div className="ai-copy">
-            <span className="eyebrow">Inteligência artificial</span>
-            <h2>Um gerente que nunca dorme, direto no seu WhatsApp</h2>
-            <p className="lead">
-              Pergunte do jeito que você fala. A IA do Chefix responde com os
-              números reais da sua operação, sugere a compra certa e avisa antes
-              do prejuízo acontecer.
-            </p>
-            <ul className="ai-list">
-              <li>
-                <span className="ck">✓</span> Responde quanto você lucrou e onde
-                está vazando dinheiro
-              </li>
-              <li>
-                <span className="ck">✓</span> Monta a lista de compras na medida
-                certa, sem sobra nem falta
-              </li>
-              <li>
-                <span className="ck">✓</span> Alerta validade, CMV alto e
-                desperdício em tempo real
-              </li>
-            </ul>
-            <Link href="/checkout" className="btn btn-primary btn-lg">
-              Quero a IA no meu restaurante
-            </Link>
-          </div>
-
-          <div className="ai-phone">
-            <div className="wa-chat">
-              <div className="wa-top">
-                <span className="wa-av">
-                  <svg style={{ color: "#fff" }} aria-hidden="true">
-                    <use href="#chefix-mark" />
-                  </svg>
-                </span>
-                <div className="wa-id">
-                  <b>Chefix IA</b>
-                  <span>online agora</span>
-                </div>
-              </div>
-              <div className="wa-body">
-                <div className="wa-msg out">Quanto lucrei essa semana?</div>
-                <div className="wa-msg in">
-                  Você faturou <b>R$ 32.400</b> e o lucro foi{" "}
-                  <b>R$ 9.180 (28%)</b>. O CMV subiu 2 p.p.: a muçarela pesou.
-                </div>
-                <div className="wa-msg out">O que preciso comprar pro fim de semana?</div>
-                <div className="wa-msg in">
-                  Faltam 3 itens: muçarela (12kg), tomate pelati (8 latas) e
-                  farinha (25kg). Quer que eu gere o pedido?
-                </div>
-                <div className="wa-alert">
-                  ⚠️ Tomate pelati vence em 2 dias. Use antes ou remaneje.
-                </div>
-              </div>
-              <div className="wa-input">
-                <span>Pergunte à IA do Chefix...</span>
-                <i className="wa-send" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ============ PROBLEM ============ */}
       <section className="block problem">
         <div className="wrap">
@@ -334,50 +259,48 @@ export default function HomePage() {
       <section className="block results">
         <div className="wrap">
           <div className="sec-head">
-            <span className="eyebrow">Do achismo ao controle</span>
-            <h2>O que muda no fim do mês</h2>
+            <span className="eyebrow">Do improviso ao lucro</span>
+            <h2>Do improviso ao lucro real</h2>
             <p className="lead">
-              O dono de restaurante não compra "controle de estoque". Compra
-              tranquilidade, economia e mais dinheiro no caixa. É isso que o
-              Chefix entrega.
+              O dono de restaurante não precisa de mais planilhas. Precisa de
+              tranquilidade, economia e dinheiro no caixa. É isso que o Chefix
+              entrega.
             </p>
           </div>
           <div className="results-grid">
             <div className="rcard">
-              <div className="rkpi">
-                até <b>30%</b> menos
-              </div>
-              <h3>Desperdício sob controle</h3>
+              <div className="ric">🍕</div>
+              <h3>Até 30% menos desperdício</h3>
               <p>
-                A IA avisa o que está prestes a vencer e o que sobra sem girar.
-                Você usa antes de jogar dinheiro no lixo.
+                O sistema mostra o que vai vencer e o que sobra sem girar. Você
+                usa antes de perder.
               </p>
             </div>
             <div className="rcard feature">
-              <div className="rkpi">
-                CMV em <b>tempo real</b>
-              </div>
-              <h3>Custo na mão, todo dia</h3>
+              <div className="ric">📊</div>
+              <h3>Gestão em tempo real</h3>
               <p>
-                Saiba a margem real de cada prato na hora. Ajuste preço e
-                cardápio com número, não com achismo.
+                Custos, estoque e desperdício atualizados a cada movimento.
+                Decida com número, não com achismo.
               </p>
             </div>
             <div className="rcard">
-              <div className="rkpi">
-                <b>+</b> lucro/mês
-              </div>
-              <h3>Mais dinheiro no caixa</h3>
+              <div className="ric">💰</div>
+              <h3>Mais lucro todo mês</h3>
               <p>
-                Comprando certo, precificando certo e cortando perda, sobra mais
-                no fim do mês. Simples assim.
+                Comprando certo, precificando certo e cortando perdas, sobra mais
+                no caixa. Simples assim.
               </p>
             </div>
           </div>
-          <p className="results-note">
-            Números variam por operação. Peça uma simulação com os dados do seu
-            restaurante.
-          </p>
+          <div className="sec-cta">
+            <Link href="/checkout" className="btn btn-primary btn-lg">
+              Quero testar grátis por 7 dias
+            </Link>
+            <p className="sec-cta-note">
+              Gestão completa por R$ 290/mês, sem fidelidade.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -386,10 +309,11 @@ export default function HomePage() {
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">Como o Chefix faz acontecer</span>
-            <h2>8 módulos trabalhando juntos pelo seu lucro</h2>
+            <h2>8 módulos conectados para transformar operação em lucro</h2>
             <p className="lead">
-              Oito módulos que conversam entre si. Você cadastra uma vez e a
-              informação flui do recebimento até o relatório.
+              Cadastre uma vez e controle estoque, fichas técnicas, compras,
+              desperdício e etiquetagem sem retrabalho. Informação única, gestão
+              completa.
             </p>
           </div>
           <div className="bento">
@@ -405,10 +329,7 @@ export default function HomePage() {
                 <span className="bchip">Custo por prato</span>
               </div>
               <h3>Fichas técnicas</h3>
-              <p>
-                Custo detalhado de bases e pratos finalizados, com foto, modo de
-                preparo e rendimento. A margem real aparece na hora.
-              </p>
+              <p>Custo real de cada prato em poucos minutos.</p>
               <div className="mini-ficha">
                 <div className="mf-row">
                   <span>Muçarela (120g)</span>
@@ -436,10 +357,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Precificação inteligente</h3>
-              <p>
-                Lucro, custos fixos e variáveis e taxas de delivery em poucos
-                cliques.
-              </p>
+              <p>Ajuste sua precificação com poucos cliques.</p>
             </div>
 
             <div className="bcard tall">
@@ -455,7 +373,7 @@ export default function HomePage() {
               </div>
               <h3>Etiquetagem automática</h3>
               <p>
-                Conformidade total com a Vigilância Sanitária, sem digitar
+                Imprima etiquetas de validade em segundos, sem precisar digitar
                 validade.
               </p>
               <div className="mini-etq">
@@ -483,7 +401,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Gestão de estoque</h3>
-              <p>Entradas e saídas integradas, de forma simples.</p>
+              <p>Entradas e saídas integradas, sem retrabalho.</p>
             </div>
 
             <div className="bcard b-compras">
@@ -495,7 +413,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Compras e cotações</h3>
-              <p>Pedidos automatizados, conectados ao estoque.</p>
+              <p>Pedidos automáticos, estoque sempre certo.</p>
             </div>
 
             <div className="bcard b-desperd">
@@ -506,7 +424,10 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Controle de desperdício</h3>
-              <p>Relatórios com motivo, quantidade e responsável.</p>
+              <p>
+                Sua equipe lança em segundos e você tem relatórios claros para
+                cortar perdas.
+              </p>
             </div>
 
             <div className="bcard b-checklist">
@@ -517,7 +438,7 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Checklist de atividades</h3>
-              <p>Rotinas da equipe organizadas todos os dias.</p>
+              <p>Equipe organizada, rotina eficiente.</p>
             </div>
 
             <div className="bcard b-guia">
@@ -528,8 +449,19 @@ export default function HomePage() {
                 </svg>
               </div>
               <h3>Guia de produção</h3>
-              <p>Fichas com foto e rendimento no padrão da cozinha.</p>
+              <p>
+                As fichas técnicas geram o guia de produção automaticamente, para
+                tudo sair sempre no padrão.
+              </p>
             </div>
+          </div>
+          <div className="sec-cta">
+            <Link href="/checkout" className="btn btn-primary btn-lg">
+              Quero testar grátis por 7 dias
+            </Link>
+            <p className="sec-cta-note" style={{ color: "#b3c1da" }}>
+              Gestão completa por R$ 290/mês, sem fidelidade.
+            </p>
           </div>
         </div>
       </section>
@@ -751,10 +683,10 @@ export default function HomePage() {
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">Veja funcionando</span>
-            <h2>O Chefix em ação, em 2 minutos</h2>
+            <h2>Veja como a Chefix pode transformar sua gestão em 2 minutos</h2>
             <p className="lead">
-              Do cadastro do insumo à IA respondendo no WhatsApp. Veja como fica
-              simples controlar a operação inteira.
+              Gestão completa: estoque, fichas técnicas, compras, etiquetagem e
+              desperdício em segundos.
             </p>
           </div>
           {/* TODO: trocar o data-video pelo embed real (YouTube/Vimeo/MP4) enviado pelo cliente */}
@@ -771,80 +703,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============ CONSULTORIA MODULES ============ */}
-      <section className="block mods" id="consultoria">
-        <div className="wrap">
-          <div className="sec-head">
-            <span className="eyebrow">Módulos personalizados</span>
-            <h2>Consultoria e sistema no mesmo lugar</h2>
-            <p className="lead">
-              Cada aba aparece apenas para os clientes da respectiva empresa. Quem
-              faz consultoria com a gente ganha um módulo sob medida.
-            </p>
-          </div>
-          <div className="mod-grid">
-            <div className="mod">
-              <div className="mh">
-                <div className="badge">Pr</div>
-                <div>
-                  <h3>Aba Proattiva</h3>
-                  <span>Boas práticas &amp; segurança alimentar</span>
-                </div>
-              </div>
-              <ul>
-                <li>
-                  <span className="ck">✓</span> Relatórios detalhados de visita
-                  técnica
-                </li>
-                <li>
-                  <span className="ck">✓</span> Controle rigoroso de documentos
-                  sanitários
-                </li>
-                <li>
-                  <span className="ck">✓</span> Drive exclusivo do cliente para
-                  armazenamento
-                </li>
-              </ul>
-              <div className="lock">🔒 Visível apenas para clientes Proattiva</div>
-            </div>
-            <div className="mod">
-              <div className="mh">
-                <div className="badge">TF</div>
-                <div>
-                  <h3>Aba Torres Fintech</h3>
-                  <span>Gestão financeira &amp; contábil</span>
-                </div>
-              </div>
-              <ul>
-                <li>
-                  <span className="ck">✓</span> Módulo completo de BPO Financeiro
-                </li>
-                <li>
-                  <span className="ck">✓</span> Integração direta com dados
-                  contábeis
-                </li>
-                <li>
-                  <span className="ck">✓</span> Dashboards financeiros de alta
-                  performance
-                </li>
-              </ul>
-              <div className="lock">
-                🔒 Visível apenas para clientes Torres Fintech
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ============ COMPARISON ============ */}
       <section className="block compare">
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">Por que trocar</span>
-            <h2>Planilha controla. O Chefix faz seu restaurante lucrar.</h2>
+            <h2>Planilhas travam. Sistemas limitam. Chefix faz seu negócio lucrar.</h2>
             <p className="lead">
-              Sistema tradicional te dá relatório. O Chefix te dá decisão, com IA
-              trabalhando junto.
+              Enquanto outros só controlam ou mostram relatório, o Chefix conecta
+              estoque, fichas, compras, etiquetagem e desperdício em tempo real.
+              Gestão prática que vira lucro.
             </p>
           </div>
           <div className="compare-wrap">
@@ -853,59 +721,53 @@ export default function HomePage() {
                 <tr>
                   <th>&nbsp;</th>
                   <th>Planilhas</th>
-                  <th>Sistema tradicional</th>
+                  <th>Sistemas tradicionais</th>
                   <th className="hi">Chefix</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>CMV em tempo real</td>
+                  <td>📊 Gestão em tempo real</td>
                   <td className="no">✕</td>
                   <td className="mid">Parcial</td>
                   <td className="yes hi">✓</td>
                 </tr>
                 <tr>
-                  <td>Assistente de IA no WhatsApp</td>
-                  <td className="no">✕</td>
-                  <td className="no">✕</td>
-                  <td className="yes hi">✓</td>
-                </tr>
-                <tr>
-                  <td>Alerta de desperdício e validade</td>
+                  <td>♻️ Alerta de desperdício e controle de validade</td>
                   <td className="no">✕</td>
                   <td className="mid">Manual</td>
                   <td className="yes hi">✓</td>
                 </tr>
                 <tr>
-                  <td>Cadastro único (sem retrabalho)</td>
+                  <td>📝 Cadastro único refletindo em todo o sistema</td>
                   <td className="no">✕</td>
                   <td className="mid">Parcial</td>
                   <td className="yes hi">✓</td>
                 </tr>
                 <tr>
-                  <td>Etiquetagem dentro da norma</td>
+                  <td>🏷️ Etiquetagem automática, sem digitar validade</td>
                   <td className="no">✕</td>
                   <td className="mid">Depende</td>
                   <td className="yes hi">✓</td>
                 </tr>
                 <tr>
-                  <td>Feito por quem vive a operação</td>
+                  <td>👨‍🍳 Feito por quem vive a operação todos os dias</td>
                   <td className="no">✕</td>
                   <td className="no">✕</td>
                   <td className="yes hi">✓</td>
                 </tr>
                 <tr>
-                  <td>Depende de você o tempo todo</td>
-                  <td className="no">Sempre</td>
-                  <td className="mid">Muito</td>
-                  <td className="yes hi">A IA ajuda</td>
+                  <td>✅ Um único sistema com tudo que você precisa</td>
+                  <td className="no">✕</td>
+                  <td className="no">✕</td>
+                  <td className="yes hi">✓</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div className="compare-cta">
             <Link href="/checkout" className="btn btn-primary btn-lg">
-              Quero aumentar meu lucro
+              Quero testar grátis por 7 dias
             </Link>
           </div>
         </div>
@@ -1099,7 +961,9 @@ export default function HomePage() {
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">Por trás do Chefix</span>
-            <h2>Três referências unidas para transformar sua gestão</h2>
+            <h2>
+              Três referências que já transformam mais de 135 estabelecimentos
+            </h2>
             <p className="lead">
               O Chefix nasceu de quem vive o setor de alimentação por dentro, da
               cozinha à contabilidade.
@@ -1111,8 +975,9 @@ export default function HomePage() {
               <div className="role">Operação &amp; segurança</div>
               <h3>Proattiva</h3>
               <p>
-                Equipe de nutricionistas focada em boas práticas, gestão de
-                estoque, controle de desperdício, fichas técnicas e etiquetagem.
+                Equipe de nutricionistas que já atende mais de 35
+                estabelecimentos, garantindo boas práticas, gestão de estoque,
+                controle de desperdício, fichas técnicas e etiquetagem.
               </p>
             </div>
             <div className="fcol">
@@ -1120,8 +985,9 @@ export default function HomePage() {
               <div className="role">Financeiro &amp; contábil</div>
               <h3>Torres Fintech</h3>
               <p>
-                Especialista em gestão financeira e contábil, do BPO financeiro à
-                contabilidade estratégica para o setor.
+                Especialista em gestão financeira e contábil, atendendo mais de
+                100 estabelecimentos com BPO e contabilidade estratégica para o
+                setor.
               </p>
             </div>
             <div className="fcol">
@@ -1129,8 +995,8 @@ export default function HomePage() {
               <div className="role">Mercado &amp; experiência</div>
               <h3>Lucas Vrau</h3>
               <p>
-                Influenciador digital e empresário do setor de alimentação,
-                trazendo a visão prática do dia a dia da operação.
+                Influenciador e empresário do setor de alimentação, trazendo a
+                visão prática de quem vive a operação todos os dias.
               </p>
             </div>
           </div>
@@ -1145,18 +1011,6 @@ export default function HomePage() {
             <h2>Tudo o que você precisa saber</h2>
           </div>
           <details className="acc" open>
-            <summary>
-              Como funciona o assistente de IA no WhatsApp?{" "}
-              <span className="pm">+</span>
-            </summary>
-            <div className="a-body">
-              Você conversa no WhatsApp em português, do jeito que fala. A IA do
-              Chefix responde com os números reais da sua operação (lucro, CMV,
-              estoque), sugere a lista de compras certa e avisa sobre validade e
-              desperdício antes do prejuízo acontecer.
-            </div>
-          </details>
-          <details className="acc">
             <summary>
               Preciso de algum equipamento especial? <span className="pm">+</span>
             </summary>
@@ -1231,19 +1085,19 @@ export default function HomePage() {
             </span>
             <h2>Pronto para lucrar mais no seu restaurante?</h2>
             <p>
-              Ative os 7 dias grátis em minutos e deixe a IA do Chefix cuidar da
-              operação por você. Prefere ver antes? Use o formulário ao lado e um
-              especialista fala com você.
+              Ative os 7 dias grátis e veja como o Chefix conecta estoque,
+              fichas, compras e desperdício em tempo real. Prefere ver antes?
+              Solicite uma demonstração com especialista.
             </p>
             <Link
               href="/checkout"
               className="btn btn-primary btn-lg"
               style={{ marginTop: 26 }}
             >
-              Quero aumentar meu lucro
+              Teste grátis por 7 dias, sem fidelidade
             </Link>
             <p className="hero-micro" style={{ color: "#aab8d0" }}>
-              7 dias grátis. Depois R$ 290/mês, sem fidelidade.
+              Gestão completa por R$ 290/mês. Cancele quando quiser.
             </p>
             <div className="assurances">
               <div className="a">
@@ -1252,7 +1106,7 @@ export default function HomePage() {
                     <path d="M4 12l6 6L20 6" />
                   </svg>
                 </span>{" "}
-                Demonstração sem compromisso
+                Demonstração prática, sem compromisso
               </div>
               <div className="a">
                 <span className="ck">
@@ -1260,7 +1114,7 @@ export default function HomePage() {
                     <path d="M4 12l6 6L20 6" />
                   </svg>
                 </span>{" "}
-                Especialista do setor
+                Especialista que vive a operação
               </div>
               <div className="a">
                 <span className="ck">
@@ -1268,7 +1122,7 @@ export default function HomePage() {
                     <path d="M4 12l6 6L20 6" />
                   </svg>
                 </span>{" "}
-                Todo o Brasil
+                Atendimento em todo o Brasil
               </div>
             </div>
           </div>
