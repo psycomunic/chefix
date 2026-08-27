@@ -49,6 +49,20 @@ const faqLd = {
   ],
 };
 
+const SEGMENTS = [
+  "Restaurantes",
+  "Padarias",
+  "Pizzarias",
+  "Hamburguerias",
+  "Escolas",
+  "Buffets e festas",
+  "Indústrias",
+  "Confeitarias",
+  "Cafeterias",
+  "Bares",
+  "Cozinhas industriais",
+];
+
 export default function HomePage() {
   return (
     <>
@@ -61,70 +75,125 @@ export default function HomePage() {
       <section className="hero">
         <div className="wrap">
           <div className="hero-copy">
-            <span className="ai-badge">
-              <span className="ai-dot" /> Novo: assistente de IA no WhatsApp
-            </span>
             <span className="eyebrow">
-              A plataforma operacional com IA para restaurantes
+              A plataforma operacional com tecnologia de ponta para o setor de
+              alimentação
             </span>
             <h1>
-              Seu restaurante pode <span className="hl">lucrar mais</span>. A IA do
-              Chefix mostra como.
+              Chefix: da ficha técnica ao estoque, das compras ao desperdício,{" "}
+              <span className="hl">tudo conectado</span> para gerar lucro real.
             </h1>
             <p className="lead">
-              Menos desperdício, CMV sob controle e mais dinheiro no fim do mês. O
-              assistente de IA organiza estoque, compras e fichas técnicas, e
-              responde tudo pelo WhatsApp.
+              Um único sistema que integra fichas técnicas, estoque, compras,
+              cotações, controle de desperdício e etiquetagem automática. Menos
+              retrabalho, mais margem e gestão completa em tempo real.
             </p>
             <div className="hero-cta">
               <Link href="/checkout" className="btn btn-primary btn-lg">
-                Quero aumentar meu lucro
+                Quero testar grátis por 7 dias
               </Link>
-              <a href="#ia" className="btn btn-ghost btn-lg">
-                Ver a IA em ação
+              <a href="#video" className="btn btn-ghost btn-lg">
+                Ver a Chefix em ação
               </a>
             </div>
             <p className="hero-micro">
-              7 dias grátis. Depois R$ 290/mês, sem fidelidade. Cancele quando
-              quiser.
+              Teste grátis por 7 dias. Gestão completa por R$ 290/mês, sem
+              fidelidade.
             </p>
             <div className="hero-meta">
               <div className="m">
-                <b>+100</b>
-                <span>restaurantes atendidos</span>
+                <span className="m-ic">🍽️</span>
+                <b>+100 restaurantes atendidos</b>
+                <span>&ldquo;Gestores que já cortaram perdas e aumentaram lucro.&rdquo;</span>
               </div>
               <div className="m">
-                <b>Tempo real</b>
-                <span>CMV a cada venda</span>
+                <span className="m-ic">📊</span>
+                <b>Gestão em tempo real</b>
+                <span>&ldquo;Estoque, custos e desperdício atualizados a cada movimento.&rdquo;</span>
               </div>
               <div className="m">
-                <b>Brasil</b>
-                <span>cobertura nacional</span>
+                <span className="m-ic">🌎</span>
+                <b>Cobertura nacional</b>
+                <span>&ldquo;Gestão completa em qualquer lugar do Brasil.&rdquo;</span>
               </div>
               <div className="m">
+                <span className="m-ic">🔓</span>
                 <b>Sem fidelidade</b>
-                <span>cancele quando quiser</span>
+                <span>&ldquo;Teste grátis, sem risco, cancele quando quiser.&rdquo;</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============ TRUST ============ */}
+      {/* ============ TRUST (esteira) ============ */}
       <div className="trust">
         <div className="wrap">
           <span className="lbl">Feito para toda cozinha profissional</span>
-          <div className="seg">
-            <span className="chip">Restaurantes</span>
-            <span className="chip">Padarias</span>
-            <span className="chip">Pizzarias</span>
-            <span className="chip">Hamburguerias</span>
-            <span className="chip">Escolas</span>
-            <span className="chip">Buffets &amp; festas</span>
-            <span className="chip">Indústrias</span>
+        </div>
+        <div className="marquee">
+          <div className="marquee-track">
+            {[...SEGMENTS, ...SEGMENTS].map((s, i) => (
+              <span
+                className="chip"
+                key={i}
+                aria-hidden={i >= SEGMENTS.length ? true : undefined}
+              >
+                {s}
+              </span>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* ============ LABEL ============ */}
+      <section className="block label-sec">
+        <div className="wrap">
+          <div>
+            <span className="eyebrow">Etiquetagem automática</span>
+            <h2>Rápida, inteligente e dentro da norma</h2>
+            <p className="lead" style={{ marginTop: 16 }}>
+              A etiquetagem que costuma travar a cozinha vira o processo mais
+              simples do dia. Sem preencher validade à mão, sem re-cadastrar
+              produto.
+            </p>
+            <ul className="steps">
+              <li>
+                <span className="num">1</span>
+                <div>
+                  <b>Cadastre uma única vez</b>
+                  <p>O produto e suas regras ficam salvos para sempre.</p>
+                </div>
+              </li>
+              <li>
+                <span className="num">2</span>
+                <div>
+                  <b>A validade é gerada sozinha</b>
+                  <p>O sistema calcula automaticamente a data conforme o insumo.</p>
+                </div>
+              </li>
+              <li>
+                <span className="num">3</span>
+                <div>
+                  <b>Alerta antes de vencer</b>
+                  <p>Você é avisado a tempo de aproveitar ou remanejar.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="label-visual">
+            <Image
+              className="etq-photo"
+              src="/tomate.png"
+              alt="Pote de molho de tomate artesanal Chefix com etiqueta de manipulação, validade e lote gerada automaticamente"
+              width={1500}
+              height={1274}
+              sizes="(max-width: 840px) 92vw, 600px"
+              priority={false}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ============ IA (WHATSAPP) ============ */}
       <section className="block ai-sec bg-navy" id="ia">
@@ -677,57 +746,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============ LABEL ============ */}
-      <section className="block label-sec">
-        <div className="wrap">
-          <div>
-            <span className="eyebrow">Etiquetagem automática</span>
-            <h2>Rápida, inteligente e dentro da norma</h2>
-            <p className="lead" style={{ marginTop: 16 }}>
-              A etiquetagem que costuma travar a cozinha vira o processo mais
-              simples do dia. Sem preencher validade à mão, sem re-cadastrar
-              produto.
-            </p>
-            <ul className="steps">
-              <li>
-                <span className="num">1</span>
-                <div>
-                  <b>Cadastre uma única vez</b>
-                  <p>O produto e suas regras ficam salvos para sempre.</p>
-                </div>
-              </li>
-              <li>
-                <span className="num">2</span>
-                <div>
-                  <b>A validade é gerada sozinha</b>
-                  <p>O sistema calcula automaticamente a data conforme o insumo.</p>
-                </div>
-              </li>
-              <li>
-                <span className="num">3</span>
-                <div>
-                  <b>Alerta antes de vencer</b>
-                  <p>Você é avisado a tempo de aproveitar ou remanejar.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="label-visual">
-            <Image
-              className="etq-photo"
-              src="/tomate.png"
-              alt="Pote de molho de tomate artesanal Chefix com etiqueta de manipulação, validade e lote gerada automaticamente"
-              width={1500}
-              height={1274}
-              sizes="(max-width: 840px) 92vw, 600px"
-              priority={false}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ============ DEMO VIDEO ============ */}
-      <section className="block video-sec bg-mist">
+      <section className="block video-sec bg-mist" id="video">
         <div className="wrap">
           <div className="sec-head">
             <span className="eyebrow">Veja funcionando</span>
