@@ -1196,3 +1196,15 @@ footer{background:#12203a;color:#9fb0cc;padding:64px 0 30px;font-size:14.5px}
 .etq-out-v span{color:var(--orange-600);font-weight:800}
 @keyframes printOut{0%{transform:translateX(-50%) translateY(-92px);opacity:0}15%{opacity:1}55%{transform:translateX(-50%) translateY(8px);opacity:1}85%{transform:translateX(-50%) translateY(8px);opacity:1}100%{transform:translateX(-50%) translateY(8px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.etq-out{animation:none;transform:translateX(-50%) translateY(8px);opacity:1}}
+
+/* correcoes do painel de insumos no modo escuro */
+[data-theme="dark"] .ip-head{background:#1a2a49;border-bottom-color:var(--line)}
+[data-theme="dark"] .ip-tag{background:#22345a;border-color:var(--line);color:var(--slate)}
+[data-theme="dark"] .ip-title .ip-ic{background:rgba(248,108,31,.18)}
+[data-theme="dark"] .ip-pr{color:var(--slate)}
+[data-theme="dark"] .ip-emb{background:#22345a;border-color:var(--line);color:#c9d6ec}
+[data-theme="dark"] .ip-row:not(.ip-hd){border-top-color:var(--line)}
+[data-theme="dark"] .ip-row:not(.ip-hd):hover{background:#1c2c4b}
+[data-theme="dark"] .ip-row.is-hot{background:rgba(248,108,31,.16);box-shadow:inset 0 0 0 1px rgba(248,108,31,.4);border-top-color:transparent}
+[data-theme="dark"] .ip-row.is-hot .ip-nm{color:#ffd9c2}
+[data-theme="dark"] .ip-row.is-hot .ip-cu{color:#ff9a5c}
