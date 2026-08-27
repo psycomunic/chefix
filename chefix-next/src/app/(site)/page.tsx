@@ -174,14 +174,16 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="label-visual">
-            <Image
+            <video
               className="etq-photo"
-              src="/tomate.png"
-              alt="Pote de molho de tomate artesanal Chefix com etiqueta de manipulação, validade e lote gerada automaticamente"
-              width={1500}
-              height={1274}
-              sizes="(max-width: 840px) 92vw, 600px"
-              priority={false}
+              src="/demo-chefix.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/tomate.png"
+              aria-label="Demonstração da etiquetagem automática do Chefix"
             />
           </div>
         </div>
