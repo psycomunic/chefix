@@ -174,17 +174,19 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="label-visual">
-            <video
-              className="etq-photo"
-              src="/demo-chefix.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/tomate.png"
-              aria-label="Demonstração da etiquetagem automática do Chefix"
-            />
+            <div className="etq-media">
+              <video
+                className="etq-photo"
+                src="/demo-chefix.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/tomate.png"
+                aria-label="Demonstração da etiquetagem automática do Chefix"
+              />
+            </div>
           </div>
         </div>
       </section>
